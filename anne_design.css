@@ -1,0 +1,375 @@
+:root {
+    --primary: #F7F4EF;   
+    --secondary: #2E2E2E;  
+    --accent: #A78BFA;     
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+}
+
+.website-wrapper {
+    width: 1440px;
+    min-height: 100vh;
+    background-color: var(--primary);
+    position: relative;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* ===== INAYOS NA NAVBAR ===== */
+.navbar {
+    background-color: var(--primary);
+    /* ✅ PINALIIT ANG PADDING/ESPASYO SA TAAS AT IBABA */
+    padding: 1px 0;  /* Dati ay 20px, ginawa kong 8px lang para mas dikit sa taas */
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1440px;
+    z-index: 9999;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ✅ PINALAKI ANG LOGO SA NAVBAR */
+.logo img {
+    width: 160px;  /* Dati ay 132px, ginawa kong 160px */
+    height: 160px;  /* Dati ay 132px, ginawa kong 160px */
+    object-fit: contain;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--secondary);
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+.contact-btn {
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    padding: 6px 18px;
+    border-radius: 4px;
+    background-color: transparent;
+    font-size: 15px;
+}
+
+.contact-btn:hover {
+    background-color: var(--accent);
+    color: white;
+}
+
+/* ===== HERO SECTION ===== */
+/* ✅ INIANGKOP ANG ESPASYO SA TAAS DAHIL PINALIITAN ANG NAVBAR */
+.hero {
+    background-color: transparent;
+    padding: 110px 0 80px;  /* Binawasan din ang espasyo sa itaas para hindi sobra */
+}
+
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.greeting {
+    font-size: 17.52px;
+    color: var(--accent);
+    font-weight: 400;
+}
+
+.hero-text h1 {
+    font-size: 70.8px;
+    font-weight: 600;
+    color: var(--secondary);
+    line-height: 1.1;
+}
+
+.course {
+    font-size: 16px;
+    color: var(--accent);
+    font-weight: 500;
+}
+
+.hero-image img {
+    width: 548px;
+    height: 639px;
+    object-fit: cover;
+}
+
+/* ===== ABOUT ME SECTION ===== */
+.about {
+    background-color: transparent;
+    padding: 80px 0;
+}
+
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+.about-image img {
+    width: 400px;
+    height: auto;
+    object-fit: cover;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: 32px;
+    color: var(--secondary);
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.about-text p {
+    font-size: 16px;
+    color: var(--secondary);
+    line-height: 1.8;
+}
+
+/* ===== INTEREST SECTION ===== */
+.interest {
+    background-color: transparent;
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    color: var(--secondary);
+    margin-bottom: 50px;
+    font-weight: 600;
+}
+
+.interest-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 25px;
+}
+
+.interest-card {
+    text-align: center;
+}
+
+.interest-card img {
+    width: 223px;
+    height: 250px;
+    object-fit: cover;
+    border: 4px solid var(--accent);
+    border-radius: 4px;
+    margin-bottom: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.interest-card p {
+    font-size: 15px;
+    color: var(--secondary);
+    font-weight: 500;
+}
+
+/* ===== SKILLS SECTION ===== */
+.skills {
+    background-color: transparent;
+    padding: 80px 0;
+}
+
+.skills-container {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.skill-box {
+    background-color: var(--accent);
+    color: white;
+    padding: 14px 20px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.skill-box img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+/* ===== EXPERIENCE SECTION ===== */
+.experience {
+    background-color: transparent;
+    padding: 80px 0;
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.experience-card {
+    text-align: center;
+}
+
+.experience-card img {
+    width: 374px;
+    height: 220px;
+    object-fit: cover;
+    background-color: var(--accent);
+    padding: 3px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.experience-card p {
+    font-size: 15px;
+    color: var(--secondary);
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+/* ===== CONTACT SECTION ===== */
+.contact {
+    background-color: transparent;
+    padding: 80px 0;
+    border-top: 1px solid #e8e2dc;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.contact-left {
+    flex: 1;
+}
+
+.contact-left h2 {
+    font-size: 32px;
+    color: var(--secondary);
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.contact-left h2 span {
+    color: var(--accent);
+}
+
+.contact-left p {
+    font-size: 15px;
+    color: var(--secondary);
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.send-btn {
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    padding: 10px 22px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: transparent;
+}
+
+.send-btn:hover {
+    background-color: var(--accent);
+    color: white;
+}
+
+.contact-middle {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 20px;
+    border-left: 1px solid #e8e2dc;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact-item img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.contact-item h4 {
+    font-size: 15px;
+    color: var(--secondary);
+    margin-bottom: 3px;
+}
+
+.contact-item p {
+    font-size: 14px;
+    color: var(--secondary);
+}
+
+/* ✅ MALAKING LOGO SA CONTACTS */
+.contact-right img {
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+}

@@ -1,0 +1,776 @@
+/* --- VANTA BACKGROUND --- */
+#vanta-bg {
+    position: fixed;
+    z-index: -10; /* Para siguradong nasa pinakalikod siya ng lahat */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* --- DAGDAG PARA SA SMOOTH SCROLL --- */
+html {
+    scroll-behavior: smooth;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+/* Reset basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #100425;
+    color: #ffffff;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden; /* Ito ang tatanggal sa horizontal scroll */
+    overflow-y: hidden;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: flex-end; /* Pinapanatili ang links sa kanan base sa image mo */
+    align-items: center;
+    padding: 20px 10%; /* Binawasan ang padding para hindi masyadong malapad */
+    
+    /* Ito ang magic para sa Transparent Blur Effect */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05); /* Sobrang nipis na white */
+    backdrop-filter: blur(10px); /* Ito ang nagba-blur sa background */
+    -webkit-backdrop-filter: blur(10px); /* Para sa Safari support */
+    z-index: 1000; /* Siniguradong mas mataas sa lahat ng element */
+    transition: 0.3s ease;
+    
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+    z-index: 10;
+    
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    transition: 0.3s;
+    z-index: 10;
+}
+
+.nav-links a:hover {
+    color: #00e5ff;
+    text-shadow: 0 0 10px #00e5ff;
+}
+
+/* Layout Container */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 5% 0;
+    height: calc(100vh - 120px);
+    position: relative;
+}
+
+/* Typography Styles */
+.hero-text {
+    max-width: 750px;
+    z-index: 10;
+    margin-top: 70px;
+}
+
+.intro {
+    font-size: 24px; 
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    color: #ffffff;
+    font-weight: 300;
+}
+
+.intro .bold-name {
+    font-weight: 700;
+    color: #01EEFF;
+}
+
+.highlight-text {
+    font-size: 60px;
+    font-weight: 700;
+    color: #00e5ff;
+    line-height: 1.1;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #00e5ff 0%, #d400ff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    margin-bottom: 0;
+}
+
+.main-title {
+    font-size: 65px; 
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    color: #8a63ff;
+}
+
+.description {
+    font-size: 18px; 
+    color: #ffffff;
+    margin-bottom: 45px;
+    max-width: 500px; 
+    line-height: 1.5;
+}
+
+/* Social Media Icons */
+.social-icons {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.social-icons a {
+    color: #ffffff;
+    font-size: 24px;
+    transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #00e5ff;
+    transform: translateY(-5px);
+}
+
+/* Buttons */
+.btn-group {
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    padding: 14px 35px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: 0.4s;
+    display: inline-block;
+    z-index: 10;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #d400ff, #7a00ff);
+    color: white;
+    border: none;
+}
+
+.btn-primary:hover {
+    box-shadow: 0 0 25px rgba(212, 0, 255, 0.7);
+    transform: scale(1.05);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+}
+
+.btn-secondary:hover {
+    background: white;
+    color: #0a0118;
+}
+
+/* Image Section */
+.image-section {
+    position: relative;
+    width: 45%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.glow-circle-pink {
+    position: absolute;
+    width: 980px;
+    height: 900px;
+    top: -7%;
+    right: -10%;
+    background: radial-gradient(circle, rgba(229, 46, 214) 0%, transparent 60%);
+    filter: blur(100px);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.glow-circle-blue {
+    position: absolute;
+    width: 900px;
+    height: 700px;
+    top: 10%;
+    right: -50%;
+    background: radial-gradient(circle, rgb(5, 241, 249) 0%, transparent 70%);
+    filter: blur(100px);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.person-img {
+    position: relative;
+    top: -10px;
+    max-height: 110%;
+    z-index: 2;
+    filter: drop-shadow(0 0 20px rgba(122, 0, 255, 0.2));
+    -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+}
+
+/* About Section Styling */
+.about-section {
+    margin-top: 100px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 10%;
+    /* background: radial-gradient(circle at 50% 50%, #1a0b35 0%, #100425 100%); */
+    z-index: 5;
+}
+
+.profile-area {
+    max-width: 800px;
+    margin-bottom: 60px;
+}
+
+.pfp-wrapper {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 3px solid #8a63ff;
+    overflow: hidden;
+    margin: 0 auto 20px;
+    box-shadow: 0 0 30px rgba(138, 99, 255, 0.5);
+}
+
+.about-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cyan-text {
+    color: #00e5ff;
+    font-weight: 600;
+}
+
+.about-title {
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 10px 0 20px;
+    letter-spacing: 2px;
+}
+
+.about-desc {
+    font-size: 16px;
+    color: #cccccc;
+    line-height: 1.6;
+}
+
+/* Cards Layout */
+.cards-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    z-index: 10;
+}
+
+.skill-card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: left;
+    transition: 0.3s;
+    z-index: 10;
+}
+
+.skill-card:hover {
+    background: rgba(255, 255, 255, 0.07);
+}
+
+.skill-card h3 {
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.skill-card p {
+    font-size: 13px;
+    color: #ffffff;
+    line-height: 1.5;
+}
+
+.glow-circle-red {
+    position: absolute;
+    width: 990px;
+    height: 990px;
+    top: 80%;
+    right: -30%;
+    background: radial-gradient(circle, rgb(183, 67, 46) 0%, transparent 60%);
+    filter: blur(100px);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.glow-circle-yellow {
+    position: absolute;
+    width: 990px;
+    height: 990px;
+    top: 115%;
+    left: -30%;
+    background: radial-gradient(circle, rgb(255, 255, 0) 0%, transparent 60%);
+    filter: blur(100px);
+    z-index: 1;
+    pointer-events: none;
+}
+.glow-circle-orange {
+    position: absolute;
+    width: 990px;
+    height: 990px;
+    top: 80%;
+    right: 20%;
+    background: radial-gradient(circle, rgb(255, 165, 0) 0%, transparent 30%);
+    filter: blur(100px);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* --- PROJECT SECTION START --- */
+.project-card {
+    position: relative; 
+}
+
+/* --- PROJECT LINK BUTTON --- */
+.project-link-btn {
+    position: absolute;
+    top: 25px;       /* Distansya mula sa taas */
+    right: 25px;     /* Distansya mula sa kanan */
+    width: 45px;
+    height: 45px;
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background katulad sa picture */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    text-decoration: none;
+    z-index: 10;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.project-link-btn i {
+    font-size: 16px;
+    transform: rotate(-45deg); /* Iniikot ang arrow para tumuro sa top-right */
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect para mas maganda tignan pag pinatungan ng mouse */
+.project-link-btn:hover {
+    background-color: #00e5ff; /* Cyan color mo */
+    color: #100425;            /* Dark background mo para sa contrast */
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.5);
+}
+
+.project-link-btn:hover i {
+    transform: rotate(-45deg) translate(2px, -2px); /* Umaangat ng konti ang arrow */
+}
+
+.project-section {
+    padding: 100px 5%;
+    text-align: center;
+    position: relative;
+    z-index: 5;
+}
+
+.section-title {
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+}
+
+.projects-grid {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    width: 600px;
+    height: 541px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; 
+    padding-top: 35px 20px;
+    transition: 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.project-label {
+    width: 520px; 
+    text-align: left;
+    margin-top: 40px; 
+    font-size: 24px;
+    color: #ffffff; 
+    font-weight: 400;
+}
+
+.project-img-mv, .project-img-whoamI, .project-img-procedure, .project-img-documentation {
+    width: 520px;
+    height: 405px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative; 
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.project-img-mv img, .project-img-whoamI img, .project-img-procedure img, .project-img-documentation img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s ease;
+}
+
+.project-overlay-MV, 
+.project-overlay-whoamI, 
+.project-overlay-procedure, 
+.project-overlay-documentation {
+    position: absolute;
+    bottom: -100%; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    text-align: center;
+    transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1); 
+    border-radius: 20px;
+    opacity: 0;
+    z-index: 3;
+}
+
+.project-overlay-MV { background: rgba(2, 6, 14, 0.45); }
+.project-overlay-whoamI { background: rgba(63, 44, 29, 0.45); }
+.project-overlay-procedure { background: rgba(2, 43, 122, 0.45); }
+.project-overlay-documentation { background: rgba(45, 103, 47, 0.45); }
+
+.project-img-mv:hover .project-overlay-MV, 
+.project-img-whoamI:hover .project-overlay-whoamI, 
+.project-img-procedure:hover .project-overlay-procedure, 
+.project-img-documentation:hover .project-overlay-documentation {
+    bottom: 0; 
+    opacity: 1;
+}
+
+.project-card:hover img {
+    transform: scale(1.1);
+}
+
+.project-overlay-MV h3, .project-overlay-whoamI h3, .project-overlay-procedure h3, .project-overlay-documentation h3 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 15px;
+    text-transform: none; 
+}
+
+.project-overlay-MV p, .project-overlay-whoamI p, .project-overlay-procedure p, .project-overlay-documentation p {
+    font-size: 18px;
+    color: #eeeeee;
+    line-height: 1.4;
+    max-width: 90%;
+}
+
+/* --- SKILLS GRID SECTION --- */
+.skill-info {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-end; /* Pinapababa ang content */
+}
+
+/* Container para sa Read More at Icon */
+.read-more-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Isasagad sa kanan */
+    gap: 10px;
+    text-decoration: none;
+    margin-top: 15px;
+    opacity: 0; /* Hidden by default */
+    transform: translateY(10px); /* Konting gap para sa animation */
+    transition: all 0.4s ease;
+}
+
+.read-more-container span {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Ang maliit na bilog na button */
+.mini-btn {
+    width: 32px;
+    height: 32px;
+    background: #8a63ff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transition: 0.3s;
+}
+
+.mini-btn i {
+    font-size: 12px;
+    transform: rotate(-45deg);
+}
+
+/* HOVER LOGIC: Lalabas ang button pag ni-hover ang skill-box */
+.skill-box:hover .read-more-container {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hover effect para sa mismong link */
+.read-more-container:hover .mini-btn {
+    background: #00e5ff;
+    box-shadow: 0 0 10px #00e5ff;
+}
+
+.read-more-container:hover span {
+    color: #00e5ff;
+}
+.skills-grid-section {
+    padding: 100px 5%;
+    text-align: center;
+}
+
+.skills-main-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 334px); 
+    grid-template-rows: repeat(2, 403px);    
+    gap: 30px;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.skill-box {
+    width: 334px;
+    height: 403px;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #1a0b35; 
+    box-shadow: none;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.skill-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.skill-box:hover {
+    box-shadow: 0 0 20px rgba(138, 99, 255, 0.4);
+    transform: scale(1.02);
+}
+
+.skill-box:hover img {
+    transform: scale(1.1);
+}
+
+.skill-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 20px;
+    text-align: left;
+    background: linear-gradient(to top, rgba(16, 4, 37, 0.9), transparent);
+    opacity: 0; 
+    transform: translateY(20px); 
+    transition: all 0.4s ease;
+}
+
+.skill-box:hover .skill-info {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.skill-info h3 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.skill-info p {
+    font-size: 16px;
+    color: #eeeeee;
+    line-height: 1.4;
+    font-weight: 300;
+}
+
+/* --- CONTACT SECTION --- */
+.contact-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 100px 5%;
+    text-align: center;
+}
+
+.contact-title {
+    font-size: 80px;
+    font-weight: 400; 
+    letter-spacing: 10px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.contact-subtitle {
+    font-size: 20px;
+    color: #cccccc;
+    margin-bottom: 60px;
+}
+
+.contact-form-container {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.email-display {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    color: #ffffff;
+    font-size: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.email-display i {
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.btn-get-in-touch {
+    background: #6200ea; 
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+    border: none;
+}
+
+.btn-get-in-touch:hover {
+    background: #7c4dff; 
+    box-shadow: 0 0 30px rgba(98, 0, 234, 0.5);
+    transform: scale(1.02);
+}
+
+.footer-socials {
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+.footer-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #ffffff;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+    opacity: 0.8; 
+}
+
+.footer-item:hover {
+    color: #00e5ff; 
+    opacity: 1;
+    transform: translateY(-5px); 
+    text-shadow: 0 0 10px rgba(0, 229, 255, 0.5);
+}
+
+.footer-item i {
+    font-size: 22px;
+    transition: transform 0.3s ease;
+}
+
+.footer-item:hover i {
+    transform: scale(1.2); 
+}
+
+/* --- DAGDAG PARA SA SCROLL ANIMATION STATES --- */
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(50px); 
+    transition: all 1s ease-out; 
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
