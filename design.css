@@ -1,9 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Oswald:wght@300;500&display=swap');
 
+
+/*  ======================
+        GLOBAL STYLES
+    ====================== */
+/* para smooth kapag nag slide */
 html {
     scroll-behavior: smooth;
 }
 
+/* RULE */
 * {
     margin: 0;
     padding: 0;
@@ -17,26 +23,19 @@ body {
     
 }
 
-/* Yung Fade Rectangle mo */
+/* Fade Rectangle */
 .fade-transition {
     width: 100%;
     height: 5px; 
     background: #000;
     position: relative;
     z-index: 5;
-    box-shadow: 0px -2px 100px 20px #000, 0px 20px 100px 70px #000;
+    box-shadow: 0px -2px 100px 70px #000, 0px 20px 100px 70px #000;
 }
 
-.scroll-image {
-    position: absolute;
-    top: -60;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -2;
-
-}
+/*  ======================
+         NAVIGATION
+    ====================== */
 
 /* Navigator Styling */
 header {
@@ -73,15 +72,18 @@ header {
     color: #ffd700; /* Gold hover */
 }
 
-/* Hero Section */
-.hero-section {
+
+/*  ======================
+      LANDING PAGE STYLE
+    ====================== */
+.landing-page {
     position: relative;
     height: 100vh;
     width: 100%;
     display: flex;
     align-items: flex-end;
     justify-content: flex-end; 
-    padding-right: 9%; /* Inusog natin pabalik sa kaliwa unti para hindi dikit sa edge */
+    padding-right: 9%; 
     padding-bottom: 170px;
     overflow: hidden;
 }
@@ -96,37 +98,34 @@ header {
     z-index: -2;
 }
 
-/* Content Alignment */
 .content-wrapper {
     position: relative;
     z-index: 10;
-    max-width: 650px; /* Nilakihan ang container */
+    max-width: 650px; 
     margin-left: 300px;
     text-align: center;
-    display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/* Mas malaking Tagline sa taas ng Title */
 .tagline {
     font-size: 20px;
     letter-spacing: 5px;
     color: #fff;
     margin-bottom: 10px;
     font-weight: 500;
-    text-shadow: 2px 2px 10px rgba(0,0,0,1);
+    text-shadow: 2px 2px 10px rgba(0,0,0,9);
 }
 
-/* Gold Title Styling */
+
 .main-title {
     font-family: 'Cinzel', serif;
-    font-size: 85px; /* Nilakihan ang title */
+    font-size: 85px;
     line-height: 0.9;
     margin-bottom: 25px;
     background: linear-gradient(to bottom, #fff7ad 0%, #ffa700 50%, #8a5c00 100%);
-    -webkit-background-clip: text; /* Clip sa text */
-    background-clip: text; /* Para sa future compatibility */
+    -webkit-background-clip: text;
+    background-clip: text; 
     -webkit-text-fill-color: transparent;
     filter: drop-shadow(0 5px 15px rgba(0,0,0,0.9));
 }
@@ -140,8 +139,8 @@ header {
     font-size: 18px;
     color: #f0f0f0;
     line-height: 1.6;
-    margin-bottom: 40px;
-    text-shadow: 2px 2px 8px rgba(0,0,0,1); /* Para kitang-kita ang text sa baba */
+    margin-bottom: 60px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,1);
 }
 
 /* Buttons */
@@ -153,8 +152,7 @@ header {
 .btn {
     padding: 16px 40px;
     text-decoration: none;
-    font-weight: bold;
-    color: white;
+    font-weight: 600;
     text-transform: uppercase;
     font-size: 14px;
     clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
@@ -176,7 +174,7 @@ header {
     background: rgba(255, 255, 255, 0.1);
     color: white;
     border: 1px solid rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(3px);
 }
 
 .btn-learn:hover {
@@ -184,37 +182,35 @@ header {
     color: black;
 }
 
-/* About Section Styling */
-/* Updated Details Section Layout */
+
+/*  ======================
+       ABOUT GAME STYLE
+    ====================== */
+
+.BG-ABOUT {
+    position: absolute;
+    top: -60;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+
+}
+
 .details-section {
     position: relative;
-    padding: 100px 5%;
+    padding: 200px 5%;
     min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: transparent; /* Para kitang-kita yung background image mo */
+       
 }
 
-.about-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center; /* Vertical center alignment */
-    justify-content: space-between;
-    gap: 50px;
-    width: 100%;
-    max-width: 1300px;
-}
-
-
-/* Right Side: Text & Buttons */
 .about-content {
-    flex: 1;
     display: flex;
     flex-direction: column;
-    text-align: center; /* Gawing center ang text alignment */
-    align-items: center; /* I-center ang mga flex items (tulad ng buttons) */
-    margin: 0 auto;    /* Tanggalin ang 500px, gamitin ang auto para sa centering */
+    text-align: center; 
+    align-items: center; 
+    margin: 0 auto;    
     max-width: 800px;
 }
 
@@ -228,13 +224,12 @@ header {
 
 .about-subtitle {
     font-family: 'Oswald', sans-serif; /* Gamitin ang font na ginamit mo sa body */
-    font-size: 20px;         /* Lakihan ang font size */
-    color: #ffffff;          /* Puting kulay para malinaw */
+    font-size: 20px;        
+    color: #ffffff;          
     text-transform: uppercase;
     letter-spacing: 2px;
-    margin-bottom: 25px;     /* Space sa pagitan ng subtitle at description */
-    margin-top: -10px;       /* Pwedeng lagyan ng negative margin kung gusto mo pang ilapit sa Title */
-    opacity: 0.9;            /* Bahagyang transparency para hindi kasing tapang ng Title */
+    margin-bottom: 25px;    
+    margin-top: -10px;     
 }
 
 .about-description {
@@ -242,18 +237,17 @@ header {
     line-height: 1.6;
     color: #fffafa;
     margin-bottom: 40px;
-    max-width: 600px;
+    max-width: 700px;
 }
 
-/* Horizontal Buttons Box at the Bottom Right */
 .info-buttons-box {
     display: flex;
     flex-direction: row; 
-    justify-content: center; /* I-center ang mga buttons sa loob ng box */
+    justify-content: center; 
     gap: 15px;
     width: 100%;
-    max-width: 600px; /* Limitahan ang haba ng button group */
-    margin-top: 20px;
+    max-width: 700px; 
+    margin-top: 50px;
 }
 
 .btn-info {
@@ -277,87 +271,77 @@ header {
     color: #ffd700;
 }
 
-/* Features Section Styling */
+
+/*  ======================
+       FEATURES STYLE
+    ====================== */
 .features-section {
     padding: 100px 20px;
-    background-color: #000; /* Or whatever dark bg you use */
     color: white;
     text-align: center;
 }
 
-/* Yellow Title & Centered Subtitle */
 .features-main-title {
-    font-size: 3rem;
-    color: #ffcc00; /* Yellow Color */
+    font-size: 48px;
+    color: #ffcc00; 
     text-transform: uppercase;
     margin-bottom: 10px;
     letter-spacing: 2px;
 }
 
 .features-subtitle {
-    font-size: 1.2rem;
+    font-size: 19px;
     color: #ffffff;
     margin-bottom: 60px;
-    opacity: 0.8;
 }
 
-/* Para hindi sakop ang buong screen - Limit the width and Center it */
+
 .features-container {
-    max-width: 1100px; /* Adjust this to make the 3 boxes wider or narrower */
-    margin: 0 auto;    /* This centers the whole box group */
+    max-width: 1100px; 
+    margin: 0 auto;    
 }
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-template-columns: repeat(3, 1fr); 
     gap: 25px;
 }
 
-/* Feature Box Styling */
 .feature-box {
     background: rgba(255, 255, 255, 0.05);
     border: 2px solid #333;
     padding: 50px 30px;
     transition: all 0.3s ease;
-    cursor: pointer;
     display: flex;
     flex-direction: column;
     justify-content: center;
     min-height: 250px;
+    cursor: pointer;
 }
 
-/* Hover Effect base sa screenshot style */
 .feature-box:hover {
-    border-color: #ffcc00; /* Yellow border on hover */
+    border-color: #ffcc00;
     background: rgba(255, 204, 0, 0.05);
     transform: translateY(-5px);
 }
 
 .feature-box h3 {
-    color: #fff;
-    font-size: 1.4rem;
+    color: #ffcc00;
+    font-size: 20px;
     margin-bottom: 15px;
     text-transform: uppercase;
 }
 
 .feature-box p {
-    color: #aaa;
-    font-size: 0.9rem;
+    color: #ffffff;
+    font-size: 15px;
     line-height: 1.5;
 }
 
-/* Responsive fix para sa mobile */
-@media (max-width: 900px) {
-    .features-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
 
-@media (max-width: 600px) {
-    .features-grid {
-        grid-template-columns: 1fr;
-    }
-}
+/*  ======================
+        LEVELS STYLE
+    ====================== */
 
 .BG-LEVELS {
     position: absolute;
@@ -370,13 +354,11 @@ header {
 
 }
 
-/* Levels Section Styling */
+
 .levels-section {
     padding: 100px 5%;
     margin-top: 100px;
     text-align: center;
-    background: transparent; /* Para makita pa rin yung background image sa likod */
-    position: relative;
     z-index: 10;
 }
 
@@ -391,27 +373,22 @@ header {
 .levels-subtitle {
     font-size: 1.1rem;
     margin-bottom: 50px;
-    opacity: 0.8;
-}
 
-/* Container for the 3 Wide Boxes */
+}
 .levels-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
-    flex-wrap: wrap; /* Para hindi masira sa maliit na screen */
+    gap: 30px; 
     max-width: 1400px;
     margin: 0 auto;
 }
 
-/* The Wide Image Box */
 .level-card {
     position: relative;
-    width: 400px; /* Mataba na width */
-    height: 250px; /* Mas mababa ang height para magmukhang landscape */
+    width: 400px; 
+    height: 250px;
     overflow: hidden;
-    border: none;
     border-radius: 8px;
     transition: 0.4s ease;
     cursor: pointer;
@@ -424,7 +401,7 @@ header {
     transition: 0.5s ease;
 }
 
-/* Hover Overlay (Dito lalabas yung text) */
+/* Hover Overlay (Dito na lalabas yung text) */
 .level-overlay {
     border-radius: 8px;
     border: 2px solid rgba(255, 215, 0, 0.3);
@@ -433,7 +410,7 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.50); /* Black tint pag nag-hover */
+    background: rgba(0, 0, 0, 0.50);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -469,7 +446,7 @@ header {
 }
 
 .level-card:hover .level-overlay {
-    opacity: 1; /* Lalabas ang text */
+    opacity: 1; 
 }
 
 .level-card:hover .level-overlay h3,
@@ -480,6 +457,11 @@ header {
 .level-card:hover img {
     transform: scale(1.1); /* Zoom effect sa background image */
 }
+
+
+/*  ======================
+       CHARACTER STYLE
+    ====================== */
 
 .BG-CHARACTER {
     position: absolute;
@@ -494,13 +476,10 @@ header {
 
 }
 
-/* Characters Section Styling */
 .char-section {
     position: relative;
     padding-top: 50px;
-    min-height: 80vh;
     z-index: 10;
-    background: transparent;
     margin-top: 100px;
 }
 
@@ -511,7 +490,7 @@ header {
 
 .char-main-title {
     font-family: 'Cinzel', serif;
-    font-size: 3rem;
+    font-size: 50px;
     color: #fff;
     letter-spacing: 3px;
     margin-bottom: 30px;
@@ -539,7 +518,7 @@ header {
 .btn-char:hover, .btn-char.active {
     background: #ffd700;
     color: black;
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+
 }
 
 /* Content Layout */
@@ -551,10 +530,15 @@ header {
 
 .char-content {
     display: none; /* Hidden by default */
-    grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 50px;
     animation: fadeIn 0.5s ease;
+}
+
+/* animation ng char-content */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .char-content.active {
@@ -567,21 +551,15 @@ header {
 .char-info-left {
     position: relative; 
     z-index: 15; /* Ensure it stays above background elements */
-    
     /* Move it left and up */
     transform: translateX(80px) translateY(-200px); 
    
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
 /* Left Side Info */
 .char-name {
     font-family: 'Cinzel', serif;
-    font-size: 5rem;
+    font-size: 80px;
     background: linear-gradient(to bottom, #fff7ad, #ffa700);
     -webkit-background-clip: text; /* Kinukulong ang background sa text */
     background-clip: text;
@@ -620,68 +598,16 @@ header {
 
 /* Right Side Image */
 .char-image-right img {
-    padding-left: 0; /* Siguraduhing malinis ito */
-    width: 100%; /* O kung ano man ang napili mong width */
+    padding-left: 0; 
+    width: 100%;
     max-width: 500px;
     transform: translateX(200px) translateY(-240px);
 
 }
 
-/* Base style para sa mga lumulutang na buttons */
-.floating-btn {
-    position: absolute;
-    background: rgba(255, 215, 0, 0.15);
-    border: 1px solid rgba(255, 215, 0, 0.6);
-    color: #ffd700;
-    padding: 10px 20px;
-    font-family: 'Oswald', sans-serif;
-    font-weight: bold;
-    font-size: 0.8rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    backdrop-filter: blur(5px);
-    z-index: 20;
-    pointer-events: none; /* Para hindi maabala ang click sa image */
-    clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
-    
-    /* Animation trigger */
-    animation: floatingSoft 3s ease-in-out infinite;
-}
-
-/* Positioning sa kaliwa at kanan */
-.left-btn {
-    left: 850px; /* Adjust mo base sa laki ng image mo */
-    top: 10%;
-}
-
-.right-btn {
-    right: -50px; /* Adjust mo base sa laki ng image mo */
-    top: 40%;
-    animation-delay: 1.5s; /* Para hindi sabay yung galaw nila */
-}
-
-/* Floating Animation - Soft movement lang */
-@keyframes floatingSoft {
-    0% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-15px); /* Soft lift up */
-    }
-    100% {
-        transform: translateY(0px);
-    }
-}
-
-/* Mobile Fix: Itago muna sa maliit na screen para hindi magulo */
-@media (max-width: 768px) {
-    .floating-btn {
-        display: none;
-    }
-}
-
-
-/* How to Play Section */
+/*  ======================
+      HOW TO PLAY STYLE
+    ====================== */
 .HOW-TO-PLAY {
     position: absolute;
     top: -60;
@@ -691,7 +617,6 @@ header {
     object-fit: cover;
     z-index: -2;
     
-
 }
 
 .how-section {
@@ -736,12 +661,10 @@ header {
     border-color: #ffcc00;
     background: rgba(255, 215, 0, 0.05);
     transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(255, 215, 0, 0.1);
 }
 
 .how-box-header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     margin-bottom: 25px;
     border-bottom: 1px solid rgba(255, 215, 0, 0.3);
@@ -753,15 +676,12 @@ header {
     letter-spacing: 2px;
 }
 
-.emoji {
-    font-size: 1.5rem;
-}
 
 /* Keyboard Key Styling */
 .control-item {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 25px;
     margin-bottom: 20px;
 }
 
@@ -779,7 +699,6 @@ header {
     font-weight: bold;
     box-shadow: 0 4px 0 #111;
     color: #fff;
-    display: inline-block;
 }
 
 .highlight {
@@ -801,7 +720,7 @@ header {
     position: relative;
     padding-left: 20px;
     line-height: 1.4;
-    color: #ccc;
+    color: #ffffff;
 }
 
 .obj-list li::before {
@@ -811,18 +730,15 @@ header {
     color: #ffcc00;
 }
 
-/* Responsive */
-@media (max-width: 900px) {
-    .how-container { grid-template-columns: 1fr; }
-}
-
-/* Why Play Section */
+/*  ======================
+        WHY PLAY STYLE
+    ====================== */
 .why-play-section {
     padding: 100px 5%;
     position: relative;
     z-index: 10;
     text-align: center;
-    background: linear-gradient(to bottom, transparent, #0a0a0a);
+    background: linear-gradient(transparent, #0a0a0a);
 }
 
 .why-main-title {
@@ -870,7 +786,7 @@ header {
     margin-top: 50px;
 }
 
-/* Re-using your btn-play styles but making it pop here */
+/* Re-using btn-play styles but making it pop here */
 .why-action .btn-play {
     padding: 20px 60px;
     font-size: 18px;
@@ -878,30 +794,17 @@ header {
 
 /* Specific hover effect for the Why Play button */
 .why-action .btn-play:hover {
-    transform: scale(1.15) translateY(-5px); /* Lalaki at aangat nang kaunti */
+    transform: scale(1.15) translateY(-5px); 
     box-shadow: 0 0 30px rgba(255, 215, 0, 0.8), 
-                0 0 60px rgba(255, 140, 0, 0.4); /* Double glow effect */
-    filter: brightness(1.2); /* Magliliwanag yung kulay */
-    letter-spacing: 3px; /* Bahagyang maghihiwalay yung letters para sa "action" feel */
-}
-
-/* Optional: Active state para pag kiki-click na */
-.why-action .btn-play:active {
-    transform: scale(0.95); /* lulubog nang kaunti pag pinindot */
-    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+                0 0 60px rgba(255, 140, 0, 0.4); 
+    filter: brightness(1.2); 
+    letter-spacing: 3px; 
 }
 
 
-.DEVELOPERS {
-    width: 100%;       /* Full width pa rin */
-    height: auto;      /* Hayaan ang image mag-adjust sa taas */
-    position: relative; /* Imbis na absolute para hindi lumutang */
-    z-index: -1;
-    margin-top: 50px;
-
-}
-
-/* Developers Section */
+/*  ======================
+       DEVELOPER STYLE
+    ====================== */
 .dev-section {
     padding: 100px 5%;
     text-align: center;
@@ -978,7 +881,6 @@ header {
     font-size: 0.8rem;
     color: #fff;
     opacity: 0.8;
-    text-transform: uppercase;
     letter-spacing: 1px;
 }
 
@@ -1001,136 +903,3 @@ header {
     border-color: #ffcc00;
 }
 
-/* Responsive: Magiging 2 columns pag medium screen, 1 pag mobile */
-@media (max-width: 992px) {
-    .dev-grid { grid-template-columns: repeat(2, 1fr); }
-}
-
-@media (max-width: 600px) {
-    .dev-grid { grid-template-columns: 1fr; }
-}
-
-/* =========================================
-   NEW FOOTER STYLES ADDED BELOW
-   ========================================= */
-
-.site-footer {
-    background: #050505;
-    border-top: 1px solid rgba(255, 215, 0, 0.2);
-    padding: 60px 5% 20px;
-    position: relative;
-    z-index: 10;
-    font-family: 'Oswald', sans-serif;
-}
-
-.footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    gap: 40px;
-    margin-bottom: 40px;
-}
-
-.footer-brand .footer-title {
-    font-family: 'Cinzel', serif;
-    font-size: 35px;
-    color: #fff;
-    line-height: 1;
-    margin-bottom: 15px;
-    text-shadow: 2px 2px 5px rgba(0,0,0,1);
-}
-
-.footer-brand .footer-title span {
-    color: #ffd700;
-    font-size: 28px;
-}
-
-.footer-brand p {
-    color: #aaa;
-    font-size: 15px;
-    max-width: 320px;
-    line-height: 1.6;
-}
-
-.footer-links h3, .footer-socials h3 {
-    color: #ffd700;
-    font-size: 20px;
-    margin-bottom: 20px;
-    letter-spacing: 2px;
-}
-
-.footer-links ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-links ul li {
-    margin-bottom: 12px;
-}
-
-.footer-links ul li a {
-    color: #ccc;
-    text-decoration: none;
-    transition: 0.3s;
-    font-size: 15px;
-    letter-spacing: 1px;
-}
-
-.footer-links ul li a:hover {
-    color: #ffd700;
-    padding-left: 8px; /* Slight push effect */
-}
-
-.social-icons {
-    display: flex;
-    gap: 15px;
-}
-
-.social-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 45px;
-    height: 45px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 215, 0, 0.3);
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 14px;
-    transition: 0.3s;
-    clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
-}
-
-.social-btn:hover {
-    background: #ffd700;
-    color: #000;
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
-}
-
-.footer-bottom {
-    text-align: center;
-    padding-top: 25px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    color: #777;
-    font-size: 13px;
-    letter-spacing: 1px;
-}
-
-/* Footer Responsive Design */
-@media (max-width: 768px) {
-    .footer-container {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-    
-    .footer-brand p {
-        margin: 0 auto;
-    }
-    
-    .social-icons {
-        justify-content: center;
-    }
-}

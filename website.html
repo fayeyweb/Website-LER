@@ -7,34 +7,35 @@
     <link rel="stylesheet" href="design.css">
 </head>
 <body>
-    <!-- Transparent Blur Navigator -->
+
+    <!-- ======================
+             LANDING PAGE
+         ====================== -->
     <header>
         <div class="nav-container">
             <div class="nav-left">
                 <a href="#home">HOME</a>
                 <a href="#about">ABOUT THE GAME</a>
                 <a href="#how-to-play">HOW TO PLAY</a>
-                <a href="#">DEVELOPERS</a>
+                <a href="#developers">DEVELOPERS</a>
             </div>
         </div>
     </header>
 
-    <main id="home" class="hero-section">
-
+    <main id="home" class="landing-page">
         <img src="Image/BG.jpg" class="main-bg" alt="Dungeon Background">
-        <!-- Main Content Area (Right Aligned) -->
         <div class="content-wrapper">
             <div class="game-info">
                 <p class="tagline">AN EPIC DUNGEON ADVENTURE</p>
                 <h1 class="main-title">THE LOST <br><span>EXIT REALM</span></h1>
                 
                 <p class="summary">
-                    Enter the depths of the forgotten dungeon. Face the Skeleton Knight and the Slime King in a world where every portal leads to a new mystery. Will you find the exit, or be lost forever in the realm?
+                    One life. Infinite doors. Choose your path or perish in the dark. Master the elements, slay the monsters and hunt for the hidden keys. Wield steel or magic to find the only way out, or be lost in the realm forever.
                 </p>
 
                 <div class="button-group">
                     <a href="https://github.com/fayeyweb/LER" target="_blank" class="btn btn-play">DOWNLOAD LER</a> 
-                    <a href="#" class="btn btn-learn">LEARN MORE</a>
+                    <a href="#how-to-play" class="btn btn-learn">LEARN MORE</a>
                 </div>
             </div>
         </div>
@@ -42,8 +43,11 @@
 
     <div class="fade-transition"></div>
 
-    <!-- Eto yung bagong section pagka-scroll -->
-     <img src="Image/BG_ABOUTGAME.png" class="scroll-image" alt="Game Characters">
+
+    <!-- ======================
+           ABOUT GAME SECTION
+         ====================== -->
+     <img src="Image/BG_ABOUTGAME.png" class="BG-ABOUT" alt="Game Characters">
     <section id="about" class="details-section">  
         <div class="details-container">
             <div class="details-container"> 
@@ -66,142 +70,151 @@
         </div>
     </section>
 
+
+    <!-- ======================
+            FEATURES SECTION
+         ====================== -->
      <div class="fade-transition"></div>
 
     <section id="features" class="features-section">
-    <!-- Center Header -->
-    <div class="features-header">
-        <h2 class="features-main-title">GAME FEATURES</h2>
-        <p class="features-subtitle">Core mechanics that define your journey in Lost Exit Realm.</p>
-    </div>
-
-    <!-- Centered Grid Container -->
-    <div class="features-container">
-        <div class="features-grid">
-            <div class="feature-box">
-                <h3>Class Selection</h3>
-                <p>Choose between a Warrior or a Mage.</p>
-            </div>
-            <div class="feature-box">
-                <h3>Exploration</h3>
-                <p>Explore each level and discover the best path forward.</p>
-            </div>
-            <div class="feature-box">
-                <h3>Exit Door Mechanic</h3>
-                <p>Find the correct exit door to move on to the next stage.</p>
-            </div>
-            <div class="feature-box">
-                <h3>Life System</h3>
-                <p>Start with limited lives-every mistake can cost your run.</p>
-            </div>
-            <div class="feature-box">
-                <h3>Skill Based Gameplay</h3>
-                <p>Test your timing, accuracy, and decision-making in every fight.</p>
-            </div>
-            <div class="feature-box">
-                <h3>Level Progression</h3>
-                <p>Face increasing difficulty as you advance through different levels.</p>
+        <div class="features-header">
+            <h2 class="features-main-title">GAME FEATURES</h2>
+            <p class="features-subtitle">Core mechanics that define your journey in Lost Exit Realm.</p>
+        </div>
+        <div class="features-container">
+            <div class="features-grid">
+                <div class="feature-box">
+                    <h3>Class Selection</h3>
+                    <p>Choose between a Warrior or a Mage.</p>
+                </div>
+                <div class="feature-box">
+                    <h3>Exploration</h3>
+                    <p>Explore each level and discover the best path forward.</p>
+                </div>
+                <div class="feature-box">
+                    <h3>Exit Door Mechanic</h3>
+                    <p>Find the correct exit door to move on to the next stage.</p>
+                </div>
+                <div class="feature-box">
+                    <h3>Life System</h3>
+                    <p>Start with limited lives-every mistake can cost your run.</p>
+                </div>
+                <div class="feature-box">
+                    <h3>Skill Based Gameplay</h3>
+                    <p>Test your timing, accuracy, and decision-making in every fight.</p>
+                </div>
+                <div class="feature-box">
+                    <h3>Level Progression</h3>
+                    <p>Face increasing difficulty as you advance through different levels.</p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
+
+    <!-- ======================
+             LEVELS SECTION
+         ====================== -->
     <div class="fade-transition"></div>
     <img src="Image/BG_LEVELS.png" class="BG-LEVELS" alt="Game LEVELS">
 
-    <!-- Levels Section -->
-<section id="levels" class="levels-section">
-    <div class="levels-header">
-        <h2 class="levels-main-title">LEVELS</h2>
-        <p class="levels-subtitle">Conquer the different realms of the dungeon.</p>
-    </div>
-
-    <div class="levels-container">
-        <!-- Level 1 -->
-        <div class="level-card">
-            <img src="Image/LEVEL 1.jpg" alt="Level 1"> <!-- Palitan ang src ng image mo -->
-            <div class="level-overlay">
-                <h3>LEVEL I</h3>
-                <p>Enter the damp corridors of the Whispering Woods. Watch out for slimes lurking in the shadows and find the first key to proceed.</p>
-            </div>
+    <section id="levels" class="levels-section">
+        <div class="levels-header">
+            <h2 class="levels-main-title">LEVELS</h2>
+            <p class="levels-subtitle">Conquer the different realms of the dungeon.</p>
         </div>
 
-        <!-- Level 2 -->
-        <div class="level-card">
-            <img src="Image/LEVEL 2.jpg" alt="Level 2"> <!-- Palitan ang src ng image mo -->
-            <div class="level-overlay">
-                <h3>LEVEL II</h3>
-                <p>The Skeleton Knight's domain. Navigate through crumbling ruins and sharp traps where every step could be your last.</p>
+        <div class="levels-container">
+            <!-- Level 1 -->
+            <div class="level-card">
+                <img src="Image/LEVEL 1.jpg" alt="Level 1"> <!-- Palitan ang src ng image mo -->
+                <div class="level-overlay">
+                    <h3>LEVEL I</h3>
+                    <p>This introductory stage requires players to find 2 keys while navigating a basic layout designed to teach core movement and combat against stationary enemies.</p>
+                </div>
             </div>
-        </div>
 
-        <!-- Level 3 -->
-        <div class="level-card">
-            <img src="Image/LEVEL 3.jpg" alt="Level 3"> <!-- Palitan ang src ng image mo -->
-            <div class="level-overlay">
-                <h3>LEVEL III</h3>
-                <p>The Heart of the Realm. Face the ultimate challenge in the throne room. Only the bravest heroes will find the final exit.</p>
+            <!-- Level 2 -->
+            <div class="level-card">
+                <img src="Image/LEVEL 2.jpg" alt="Level 2"> <!-- Palitan ang src ng image mo -->
+                <div class="level-overlay">
+                    <h3>LEVEL II</h3>
+                    <p>The challenge increases as players must collect 3 keys while facing more strategic enemy placements and tighter platforming sections.</p>
+                </div>
+            </div>
+
+            <!-- Level 3 -->
+            <div class="level-card">
+                <img src="Image/LEVEL 3.jpg" alt="Level 3"> <!-- Palitan ang src ng image mo -->
+                <div class="level-overlay">
+                    <h3>LEVEL III</h3>
+                    <p>As the ultimate test, this level demands 4 keys and forces players to survive against the full variety of threats, including the unpredictable Jumping Enemy.</p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
+
+
+    <!-- ======================
+           CHARACTERS SECTION
+         ====================== -->
     <div class="fade-transition"></div>
     <img src="Image/BG_CHARACTERS.png" class="BG-CHARACTER" alt="Game LEVELS">
-
-    <!-- Characters Section -->
-<section id="characters" class="char-section">
-    <div class="char-header">
-        <h2 class="char-main-title">CHARACTERS TO PLAY</h2>
-        
-        <!-- Toggle Buttons -->
-        <div class="char-selector">
-            <button class="btn-char active" onclick="showChar('mage')">MAGE</button>
-            <button class="btn-char" onclick="showChar('warrior')">WARRIOR</button>
+    <section id="characters" class="char-section">
+        <div class="char-header">
+            <h2 class="char-main-title">CHARACTERS TO PLAY</h2>
+            
+            <!-- Toggle Buttons -->
+            <div class="char-selector">
+                <button class="btn-char active" onclick="showChar('mage')">MAGE</button>
+                <button class="btn-char" onclick="showChar('warrior')">WARRIOR</button>
+            </div>
         </div>
-    </div>
 
-    <div class="char-display-container">
-        <!-- Mage Content (Default) -->
-        <div id="mage-content" class="char-content active">
-            <div class="char-info-left">
-                <h1 class="char-name">MAGE</h1>
-                <p class="char-description">
-                    Master of the arcane arts. The Mage wields powerful elemental magic to decimate foes from a distance. 
-                    Though fragile in physical combat, her spells can clear entire rooms in seconds.
-                </p>
-                <div class="skill-buttons">
-                    <button class="btn-skill">ARCANE BLAST</button>
-                    <button class="btn-skill">FIRE DASH</button>
+        <div class="char-display-container">
+            <!-- Mage Content (Default) -->
+            <div id="mage-content" class="char-content active">
+                <div class="char-info-left">
+                    <h1 class="char-name">MAGE</h1>
+                    <p class="char-description">
+                       is an agile, hovering class that utilizes infinite magic orbs and a unique charging system to enter a powerful "Super Saiyan" state.
+                       In this mode, she gains double movement speed and a golden aura, allowing her to overwhelm enemies with pure mystical energy.
+                    </p>
+                    <div class="skill-buttons">
+                        <button class="btn-skill">MAGIC ORB</button>
+                        <button class="btn-skill">SUPER SAIYAN</button>
+                    </div>
+                </div>
+                <div class="char-image-right">
+                    <img src="Image/MAGE.png" alt="Mage Character">
                 </div>
             </div>
-            <div class="char-image-right">
-                <div class="floating-btn left-btn">MAGIC ORBS</div>
-                <img src="Image/MAGE.png" alt="Mage Character">
-                <div class="floating-btn right-btn">SUPER SAIYAN</div>
-            </div>
-        </div>
 
-        <!-- Warrior Content (Hidden by default) -->
-        <div id="warrior-content" class="char-content">
-            <div class="char-info-left">
-                <h1 class="char-name">WARRIOR</h1>
-                <p class="char-description">
-                    A fearless guardian of the realm. The Warrior relies on brute strength and steel to crush enemies. 
-                    With high defense and devastating melee combos, he is the unstoppable force of the dungeon.
-                </p>
-                <div class="skill-buttons">
-                    <button class="btn-skill">HEAVY SMASH</button>
-                    <button class="btn-skill">IRON SHIELD</button>
+            <!-- Warrior Content (Hidden by default) -->
+            <div id="warrior-content" class="char-content">
+                <div class="char-info-left">
+                    <h1 class="char-name">WARRIOR</h1>
+                    <p class="char-description">
+                        is a tactical long-range specialist who uses a high-damage laser rifle with a 15-round ammo capacity.
+                        He relies on manual reloading and a quick dash mechanic to dodge attacks and maintain his position on the battlefield.
+                    </p>
+                    <div class="skill-buttons">
+                        <button class="btn-skill">DASH</button>
+                        <button class="btn-skill">GUNBLADE</button>
+                    </div>
+                </div>
+                <div class="char-image-right"> 
+                    <img src="Image/WARRIOR.png" alt="Warrior Character">
                 </div>
             </div>
-            <div class="char-image-right">
-                <div class="floating-btn left-btn">DASH</div>
-                <img src="Image/WARRIOR.png" alt="Warrior Character">
-                <div class="floating-btn right-btn">GUNBLADE</div>
-            </div>
         </div>
-    </div>
-</section>
+    </section>
 
+
+    <!-- ======================
+          HOW TO PLAY SECTION
+         ====================== -->
     <div class="fade-transition"></div>
     <img src="Image/BG_HOW TO PLAY.png" class="HOW-TO-PLAY" alt="Game Characters">
 
@@ -216,7 +229,6 @@
             <div class="how-box">
                 <div class="how-box-header">
                     <h3>CONTROLS</h3>
-                    <span class="emoji">🎮</span>
                 </div>
                 <div class="control-item">
                     <div class="key-group">
@@ -236,7 +248,6 @@
             <div class="how-box">
                 <div class="how-box-header">
                     <h3>SPECIAL SKILLS</h3>
-                    <span class="emoji">✨</span>
                 </div>
                 <div class="skill-item">
                     <p><span class="highlight">L-CLICK  (Warrior):</span> Dash</p>
@@ -256,7 +267,6 @@
             <div class="how-box">
                 <div class="how-box-header">
                     <h3>OBJECTIVES</h3>
-                    <span class="emoji">🏆</span>
                 </div>
                 <ul class="obj-list">
                     <li>Find the hidden keys and orbs by defeating powerful enemies.</li>
@@ -267,160 +277,137 @@
         </div>
     </section>
 
+
+    <!-- ======================
+            WHY PLAY SECTION
+         ====================== -->
     <div class="fade-transition"></div>
     <img src="Image/BG_HOW TO PLAY.png" class="HOW-TO-PLAY" alt="Game Characters">
 
     <section id="why-play" class="why-play-section">
-    <div class="why-header">
-        <h2 class="why-main-title">WHY PLAY?</h2>
-    </div>
-
-    <div class="why-container">
-        <div class="why-content-box">
-            <p class="why-text">
-                Ready to dive in? This game offers an intense action-packed combat experience where you can master the unique playstyles of a Warrior or a Mage. 
-            </p>
-            <p class="why-text">
-                As you explore dangerous levels and defeat hordes of enemies, you’ll need to keep your wits about you to find the correct exit and progress through a dark, immersive world. 
-            </p>
-            <p class="why-text highlight-box">
-                With limited lives on the line, every move counts—truly testing your accuracy, timing, and skill in a challenge that keeps you right on the edge of your seat.
-            </p>
-            
-            <div class="why-action">
-                <a href="https://github.com/fayeyweb/LER" target="_blank" class="btn btn-play">START YOUR ADVENTURE</a>
-            </div>
-        </div>
-    </div>
-    
-</section>
-
-    <!-- Developers Section -->
-<section id="developers" class="dev-section">
-    <div class="dev-header">
-        <h2 class="dev-main-title">MEET THE TEAM</h2>
-    </div>
-
-    <div class="dev-grid">
-        <!-- Dev 1 -->
-        <div class="dev-card">
-            <div class="dev-image-container">
-                <img src="Image/KATH.jpg" alt="Developer Name">
-                <div class="dev-info-overlay">
-                    <h4 class="dev-name">KATHLEEN FAYE D. AYSON</h4>
-                    <p class="dev-role">LEAD DEVELOPER</p>
-                </div>
-            </div>
-            <a href="kath.html" target="_blank" class="btn-portfolio">VIEW PORTFOLIO</a>
+        <div class="why-header">
+            <h2 class="why-main-title">WHY PLAY?</h2>
         </div>
 
-        <!-- Dev 2 -->
-        <div class="dev-card">
-            <div class="dev-image-container">
-                <img src="Image/DEV2.jpg" alt="Developer Name">
-                <div class="dev-info-overlay">
-                    <h4 class="dev-name">ISAAC NINOI MAPANAO</h4>
-                    <p class="dev-role">GAME DESIGNER</p>
-                </div>
-            </div>
-            <a href="#" class="btn-portfolio">VIEW PORTFOLIO</a>
-        </div>
-
-        <!-- Dev 3 -->
-        <div class="dev-card">
-            <div class="dev-image-container">
-                <img src="Image/DEV3.jpg" alt="Developer Name">
-                <div class="dev-info-overlay">
-                    <h4 class="dev-name">JUSHUA RAY YCON FRANCISCO</h4>
-                    <p class="dev-role">PIXEL ARTIST</p>
-                </div>
-            </div>
-            <a href="#" class="btn-portfolio">VIEW PORTFOLIO</a>
-        </div>
-
-        <!-- Dev 4 -->
-        <div class="dev-card">
-            <div class="dev-image-container">
-                <img src="Image/anne.jpg" alt="Developer Name">
-                <div class="dev-info-overlay">
-                    <h4 class="dev-name">ANGEL ANNE ROMUAR</h4>
-                    <p class="dev-role">PROGRAMMER</p>
-                </div>
-            </div>
-            <a href="anne.html" class="btn-portfolio">VIEW PORTFOLIO</a>
-        </div>
-
-        <!-- Dev 5 -->
-        <div class="dev-card">
-            <div class="dev-image-container">
-                <img src="Image/DEV5.jpg" alt="Developer Name">
-                <div class="dev-info-overlay">
-                    <h4 class="dev-name">EZEKIEL BARONGAN</h4>
-                    <p class="dev-role">SOUND DESIGNER</p>
-                </div>
-            </div>
-            <a href="#" class="btn-portfolio">VIEW PORTFOLIO</a>
-        </div>
-
-        <!-- Dev 6 -->
-        <div class="dev-card">
-            <div class="dev-image-container">
-                <img src="Image/DEV6.jpg" alt="Developer Name">
-                <div class="dev-info-overlay">
-                    <h4 class="dev-name">REYDENMAR DACANAY</h4>
-                    <p class="dev-role">UI/UX SPECIALIST</p>
-                </div>
-            </div>
-            <a href="#" class="btn-portfolio">VIEW PORTFOLIO</a>
-        </div>
-    </div>
-</section>
-
-    <div class="fade-transition"></div>
-    <footer class="site-footer">
-        <div class="footer-container">
-            <div class="footer-brand">
-                <h2 class="footer-title">THE LOST <br><span>EXIT REALM</span></h2>
-                <p>An epic 2D action-platformer dungeon adventure. Find the exit, or be lost forever in the depths of the realm.</p>
-            </div>
-            <div class="footer-links">
-                <h3>QUICK LINKS</h3>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About The Game</a></li>
-                    <li><a href="#levels">Levels</a></li>
-                    <li><a href="#characters">Characters</a></li>
-                </ul>
-            </div>
-            <div class="footer-socials">
-                <h3>CONNECT WITH US</h3>
-                <div class="social-icons">
-                    <a href="#" class="social-btn">FB</a>
-                    <a href="#" class="social-btn">X</a>
-                    <a href="#" class="social-btn">DC</a>
-                    <a href="https://github.com/fayeyweb/LER" target="_blank" class="social-btn">GH</a>
+        <div class="why-container">
+            <div class="why-content-box">
+                <p class="why-text">
+                    Ready to dive in? This game offers an intense action-packed combat experience where you can master the unique playstyles of a Warrior or a Mage. 
+                </p>
+                <p class="why-text">
+                    As you explore dangerous levels and defeat hordes of enemies, you’ll need to keep your wits about you to find the correct exit and progress through a dark, immersive world. 
+                </p>
+                <p class="why-text highlight-box">
+                    With limited lives on the line, every move counts truly testing your accuracy, timing, and skill in a challenge that keeps you right on the edge of your seat.
+                </p>
+                
+                <div class="why-action">
+                    <a href="https://github.com/fayeyweb/LER" target="_blank" class="btn btn-play">START YOUR ADVENTURE</a>
                 </div>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 The Lost Exit Realm. All Rights Reserved. Developed by The Dev Team.</p>
+    </section>
+
+
+    <!-- ======================
+           DEVELOPERS SECTION
+         ====================== -->
+    <section id="developers" class="dev-section">
+        <div class="dev-header">
+            <h2 class="dev-main-title">MEET THE TEAM</h2>
         </div>
-    </footer>  
 
-<!-- JavaScript for Switching --> 
-<script>
-    function showChar(charType) {
-        // Remove active class from all contents and buttons
-        document.querySelectorAll('.char-content').forEach(content => content.classList.remove('active'));
-        document.querySelectorAll('.btn-char').forEach(btn => btn.classList.remove('active'));
+        <div class="dev-grid">
+            <!-- Dev 1 -->
+            <div class="dev-card">
+                <div class="dev-image-container">
+                    <img src="Image/KATH.jpg" alt="Developer Name">
+                    <div class="dev-info-overlay">
+                        <h4 class="dev-name">KATHLEEN FAYE D. AYSON</h4>
+                        <p class="dev-role">LEAD DEVELOPER</p>
+                    </div>
+                </div>
+                <a href="KATH/kath.html" target="_blank" class="btn-portfolio">VIEW PORTFOLIO</a>
+            </div>
 
-        // Add active class to selected
-        document.getElementById(charType + '-content').classList.add('active');
-        event.currentTarget.classList.add('active');
-    }
-</script>
+            <!-- Dev 2 -->
+            <div class="dev-card">
+                <div class="dev-image-container">
+                    <img src="Image/Isaac.jpg" alt="Developer Name">
+                    <div class="dev-info-overlay">
+                        <h4 class="dev-name">ISAAC NINOI MAPANAO</h4>
+                        <p class="dev-role">GAME DESIGNER</p>
+                    </div>
+                </div>
+                <a href="#" class="btn-portfolio">VIEW PORTFOLIO</a>
+            </div>
 
-    
-     
+            <!-- Dev 3 -->
+            <div class="dev-card">
+                <div class="dev-image-container">
+                    <img src="Image/Ycon.jpg" alt="Developer Name">
+                    <div class="dev-info-overlay">
+                        <h4 class="dev-name">JUSHUA RAY YCON FRANCISCO</h4>
+                        <p class="dev-role">PIXEL ARTIST</p>
+                    </div>
+                </div>
+                <a href="#" class="btn-portfolio">VIEW PORTFOLIO</a>
+            </div>
+
+            <!-- Dev 4 -->
+            <div class="dev-card">
+                <div class="dev-image-container">
+                    <img src="Image/anne.jpg" alt="Developer Name">
+                    <div class="dev-info-overlay">
+                        <h4 class="dev-name">ANGEL ANNE ROMUAR</h4>
+                        <p class="dev-role">PROGRAMMER</p>
+                    </div>
+                </div>
+                <a href="ANNE/anne.html" class="btn-portfolio">VIEW PORTFOLIO</a>
+            </div>
+
+            <!-- Dev 5 -->
+            <div class="dev-card">
+                <div class="dev-image-container">
+                    <img src="Image/ezekiel.jpg" alt="Developer Name">
+                    <div class="dev-info-overlay">
+                        <h4 class="dev-name">EZEKIEL BARONGAN</h4>
+                        <p class="dev-role">SOUND DESIGNER</p>
+                    </div>
+                </div>
+                <a href="#" class="btn-portfolio">VIEW PORTFOLIO</a>
+            </div>
+
+            <!-- Dev 6 -->
+            <div class="dev-card">
+                <div class="dev-image-container">
+                    <img src="Image/Reyden.jpg" alt="Developer Name">
+                    <div class="dev-info-overlay">
+                        <h4 class="dev-name">REYDENMAR DACANAY</h4>
+                        <p class="dev-role">UI/UX SPECIALIST</p>
+                    </div>
+                </div>
+                <a href="#" class="btn-portfolio">VIEW PORTFOLIO</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ======================
+              JAVASCRIPT
+         ====================== -->
+    <!-- JavaScript for Switching in Characters--> 
+    <script>
+        function showChar(charType) {
+            // Remove active class from all contents and buttons
+            document.querySelectorAll('.char-content').forEach(content => content.classList.remove('active'));
+            document.querySelectorAll('.btn-char').forEach(btn => btn.classList.remove('active'));
+
+            // Add active class to selected
+            document.getElementById(charType + '-content').classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+
 </body>
 </html>
