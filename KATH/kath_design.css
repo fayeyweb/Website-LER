@@ -54,7 +54,7 @@ nav {
     color: #ffffff;
     text-decoration: none;
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 300;
     transition: 0.3s;
     z-index: 10;
 }
@@ -74,8 +74,10 @@ nav {
     
 }
 
-/* Typography Styles */
-.hero-text {
+/*  ======================
+         LANDING PAGE
+    ====================== */
+.landing-page {
     max-width: 750px;
     z-index: 10;
     margin-top: 90px;
@@ -114,7 +116,6 @@ nav {
     font-weight: 700;
     line-height: 1.1;
     margin-bottom: 25px;
-    text-transform: uppercase;
     color: #8a63ff;
 }
 
@@ -203,17 +204,17 @@ nav {
     mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
 }
 
-/* About Section Styling */
+/*  ======================
+        ABOUT ME STYLE
+    ====================== */
 .about-section {
     margin-top: 100px;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
     padding: 100px 10%;
-    /* background: radial-gradient(circle at 50% 50%, #1a0b35 0%, #100425 100%); */
     z-index: 5;
 }
 
@@ -246,14 +247,13 @@ nav {
 .about-title {
     font-size: 32px;
     font-weight: 700;
-    text-transform: uppercase;
     margin: 10px 0 20px;
     letter-spacing: 2px;
 }
 
 .about-desc {
     font-size: 16px;
-    color: #cccccc;
+    color: #ffffff;
     line-height: 1.6;
 }
 
@@ -272,13 +272,13 @@ nav {
     padding: 30px;
     border-radius: 10px;
     width: 300px;
-    text-align: left;
+    text-align: center;
     transition: 0.3s;
     z-index: 10;
 }
 
 .skill-card:hover {
-    background: rgba(255, 255, 255, 0.07);
+    background: rgba(255, 255, 255, 0.10);
 }
 
 .skill-card h3 {
@@ -293,9 +293,11 @@ nav {
     line-height: 1.5;
 }
 
-/* --- PROJECT SECTION START --- */
+/*  ======================
+        PROJECT STYLE
+    ====================== */
 .project-card {
-    position: relative; 
+    position: relative;
 }
 
 /* --- PROJECT LINK BUTTON --- */
@@ -331,10 +333,6 @@ nav {
     box-shadow: 0 0 15px rgba(0, 229, 255, 0.5);
 }
 
-.project-link-btn:hover i {
-    transform: rotate(-45deg) translate(2px, -2px); 
-}
-
 .project-section {
     padding: 100px 5%;
     text-align: center;
@@ -347,7 +345,6 @@ nav {
     font-weight: 700;
     letter-spacing: 5px;
     margin-bottom: 60px;
-    text-transform: uppercase;
 }
 
 .projects-grid {
@@ -368,7 +365,6 @@ nav {
     justify-content: flex-start; 
     padding-top: 35px 20px;
     transition: 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .project-label {
@@ -397,10 +393,7 @@ nav {
     transition: 0.5s ease;
 }
 
-.project-overlay-MV, 
-.project-overlay-whoamI, 
-.project-overlay-procedure, 
-.project-overlay-documentation {
+.project-overlay-MV, .project-overlay-whoamI, .project-overlay-procedure, .project-overlay-documentation {
     position: absolute;
     bottom: -100%; 
     left: 0;
@@ -416,6 +409,21 @@ nav {
     border-radius: 20px;
     opacity: 0;
     z-index: 3;
+}
+
+.project-overlay-MV h3, .project-overlay-whoamI h3, .project-overlay-procedure h3, .project-overlay-documentation h3 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 15px;
+    text-transform: none; 
+}
+
+.project-overlay-MV p, .project-overlay-whoamI p, .project-overlay-procedure p, .project-overlay-documentation p {
+    font-size: 18px;
+    color: #eeeeee;
+    line-height: 1.4;
+    max-width: 90%;
 }
 
 .project-overlay-MV { background: rgba(2, 6, 14, 0.45); }
@@ -435,82 +443,9 @@ nav {
     transform: scale(1.1);
 }
 
-.project-overlay-MV h3, .project-overlay-whoamI h3, .project-overlay-procedure h3, .project-overlay-documentation h3 {
-    font-size: 28px;
-    font-weight: 700;
-    color: #ffffff;
-    margin-bottom: 15px;
-    text-transform: none; 
-}
-
-.project-overlay-MV p, .project-overlay-whoamI p, .project-overlay-procedure p, .project-overlay-documentation p {
-    font-size: 18px;
-    color: #eeeeee;
-    line-height: 1.4;
-    max-width: 90%;
-}
-
-/* --- SKILLS GRID SECTION --- */
-.skill-info {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: flex-end; /* Pinapababa ang content */
-}
-
-/* Container para sa Read More at Icon */
-.read-more-container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end; /* Isasagad sa kanan */
-    gap: 10px;
-    text-decoration: none;
-    margin-top: 15px;
-    opacity: 0; /* Hidden by default */
-    transform: translateY(10px); /* Konting gap para sa animation */
-    transition: all 0.4s ease;
-}
-
-.read-more-container span {
-    color: #ffffff;
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 1px;
-}
-
-/* Ang maliit na bilog na button */
-.mini-btn {
-    width: 32px;
-    height: 32px;
-    background: #8a63ff;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    transition: 0.3s;
-}
-
-.mini-btn i {
-    font-size: 12px;
-    transform: rotate(-45deg);
-}
-
-/* HOVER LOGIC: Lalabas ang button pag ni-hover ang skill-box */
-.skill-box:hover .read-more-container {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Hover effect para sa mismong link */
-.read-more-container:hover .mini-btn {
-    background: #00e5ff;
-    box-shadow: 0 0 10px #00e5ff;
-}
-
-.read-more-container:hover span {
-    color: #00e5ff;
-}
+/*  ======================
+         SKILL STYLE
+    ====================== */
 .skills-grid-section {
     padding: 100px 5%;
     text-align: center;
@@ -525,14 +460,19 @@ nav {
     margin-top: 50px;
 }
 
+.skill-info {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-end; 
+}
+
 .skill-box {
     width: 334px;
     height: 403px;
     position: relative;
     border-radius: 20px;
     overflow: hidden;
-    background: #1a0b35; 
-    box-shadow: none;
     transition: all 0.4s ease;
     cursor: pointer;
 }
@@ -584,8 +524,60 @@ nav {
     line-height: 1.4;
     font-weight: 300;
 }
+/* Container para sa Read More at Icon */
+.read-more-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; 
+    gap: 10px;
+    text-decoration: none;
+    margin-top: 15px;
+    opacity: 0; 
+    transform: translateY(10px); 
+    transition: all 0.4s ease;
+}
 
-/* --- CONTACT SECTION --- */
+.read-more-container span {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* maliit na bilog na button */
+.mini-btn {
+    width: 32px;
+    height: 32px;
+    background: #8a63ff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transition: 0.3s;
+}
+
+.mini-btn i {
+    font-size: 12px;
+    transform: rotate(-45deg);
+}
+
+/*  Lalabas na ung button pag na hover na */
+.skill-box:hover .read-more-container {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hover effect para sa mismong link */
+.read-more-container:hover .mini-btn {
+    background: #00e5ff;
+    box-shadow: 0 0 10px #00e5ff;
+}
+
+
+/*  ======================
+         CONTACT STYLE
+    ====================== */
 .contact-section {
     min-height: 100vh;
     display: flex;
@@ -593,7 +585,6 @@ nav {
     justify-content: center;
     align-items: center;
     position: relative;
-    padding: 100px 5%;
     text-align: center;
 }
 
@@ -674,7 +665,6 @@ nav {
     font-size: 14px;
     cursor: pointer;
     transition: all 0.3s ease; 
-    opacity: 0.8; 
 }
 
 .footer-item:hover {
@@ -690,18 +680,6 @@ nav {
 }
 
 .footer-item:hover i {
-    transform: scale(1.2); 
-}
-
-.hidden {
-    opacity: 0;
-    filter: blur(5px);
-    transform: translateY(50px); 
-    transition: all 1s ease-out; 
-}
-
-.show {
-    opacity: 1;
-    filter: blur(0);
-    transform: translateY(0);
+    transform: scale(1.2);
+    color: #00e5ff;  
 }
