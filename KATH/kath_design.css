@@ -1,14 +1,10 @@
-/* --- VANTA BACKGROUND --- */
 #vanta-bg {
     position: fixed;
-    z-index: -10; /* Para siguradong nasa pinakalikod siya ng lahat */
-    top: 0;
-    left: 0;
+    z-index: -10; 
     width: 100vw;
     height: 100vh;
 }
 
-/* --- DAGDAG PARA SA SMOOTH SCROLL --- */
 html {
     scroll-behavior: smooth;
 }
@@ -16,7 +12,7 @@ html {
 html, body {
     overflow-x: hidden;
 }
-/* Reset basic styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -27,28 +23,22 @@ html, body {
 body {
     background-color: #100425;
     color: #ffffff;
-    width: 100%;
-    min-height: 100vh;
-    overflow-x: hidden; /* Ito ang tatanggal sa horizontal scroll */
+    overflow-x: hidden;
     overflow-y: hidden;
 }
 
-/* Navigation */
 nav {
     display: flex;
-    justify-content: flex-end; /* Pinapanatili ang links sa kanan base sa image mo */
+    justify-content: flex-end; 
     align-items: center;
-    padding: 20px 10%; /* Binawasan ang padding para hindi masyadong malapad */
-    
-    /* Ito ang magic para sa Transparent Blur Effect */
+    padding: 20px 10%; 
     position: fixed;
     top: 0;
-    left: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.05); /* Sobrang nipis na white */
-    backdrop-filter: blur(10px); /* Ito ang nagba-blur sa background */
-    -webkit-backdrop-filter: blur(10px); /* Para sa Safari support */
-    z-index: 1000; /* Siniguradong mas mataas sa lahat ng element */
+    background: rgba(255, 255, 255, 0.05); 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 100; 
     transition: 0.3s ease;
     
 }
@@ -71,10 +61,9 @@ nav {
 
 .nav-links a:hover {
     color: #00e5ff;
-    text-shadow: 0 0 10px #00e5ff;
+    text-shadow: 0 0 5px #00e5ff;
 }
 
-/* Layout Container */
 .container {
     display: flex;
     align-items: center;
@@ -82,13 +71,15 @@ nav {
     padding: 100px 5% 0;
     height: calc(100vh - 120px);
     position: relative;
+    
 }
 
 /* Typography Styles */
 .hero-text {
     max-width: 750px;
     z-index: 10;
-    margin-top: 70px;
+    margin-top: 90px;
+    padding-left: 60px;
 }
 
 .intro {
@@ -110,7 +101,7 @@ nav {
     color: #00e5ff;
     line-height: 1.1;
     text-transform: uppercase;
-    background: linear-gradient(90deg, #00e5ff 0%, #d400ff 100%);
+    background: linear-gradient(90deg, #5a29fc 0%, #d400ff 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -200,30 +191,6 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.glow-circle-pink {
-    position: absolute;
-    width: 980px;
-    height: 900px;
-    top: -7%;
-    right: -10%;
-    background: radial-gradient(circle, rgba(229, 46, 214) 0%, transparent 60%);
-    filter: blur(100px);
-    z-index: 1;
-    pointer-events: none;
-}
-
-.glow-circle-blue {
-    position: absolute;
-    width: 900px;
-    height: 700px;
-    top: 10%;
-    right: -50%;
-    background: radial-gradient(circle, rgb(5, 241, 249) 0%, transparent 70%);
-    filter: blur(100px);
-    z-index: 1;
-    pointer-events: none;
 }
 
 .person-img {
@@ -326,41 +293,6 @@ nav {
     line-height: 1.5;
 }
 
-.glow-circle-red {
-    position: absolute;
-    width: 990px;
-    height: 990px;
-    top: 80%;
-    right: -30%;
-    background: radial-gradient(circle, rgb(183, 67, 46) 0%, transparent 60%);
-    filter: blur(100px);
-    z-index: 1;
-    pointer-events: none;
-}
-
-.glow-circle-yellow {
-    position: absolute;
-    width: 990px;
-    height: 990px;
-    top: 115%;
-    left: -30%;
-    background: radial-gradient(circle, rgb(255, 255, 0) 0%, transparent 60%);
-    filter: blur(100px);
-    z-index: 1;
-    pointer-events: none;
-}
-.glow-circle-orange {
-    position: absolute;
-    width: 990px;
-    height: 990px;
-    top: 80%;
-    right: 20%;
-    background: radial-gradient(circle, rgb(255, 165, 0) 0%, transparent 30%);
-    filter: blur(100px);
-    z-index: -1;
-    pointer-events: none;
-}
-
 /* --- PROJECT SECTION START --- */
 .project-card {
     position: relative; 
@@ -369,11 +301,11 @@ nav {
 /* --- PROJECT LINK BUTTON --- */
 .project-link-btn {
     position: absolute;
-    top: 25px;       /* Distansya mula sa taas */
-    right: 25px;     /* Distansya mula sa kanan */
+    top: 25px;       
+    right: 25px; 
     width: 45px;
     height: 45px;
-    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background katulad sa picture */
+    background-color: rgba(255, 255, 255, 0.1); 
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -387,20 +319,20 @@ nav {
 
 .project-link-btn i {
     font-size: 16px;
-    transform: rotate(-45deg); /* Iniikot ang arrow para tumuro sa top-right */
+    transform: rotate(-45deg);
     transition: transform 0.3s ease;
 }
 
-/* Hover effect para mas maganda tignan pag pinatungan ng mouse */
+
 .project-link-btn:hover {
-    background-color: #00e5ff; /* Cyan color mo */
-    color: #100425;            /* Dark background mo para sa contrast */
+    background-color: #00e5ff;
+    color: #100425;          
     transform: scale(1.1);
     box-shadow: 0 0 15px rgba(0, 229, 255, 0.5);
 }
 
 .project-link-btn:hover i {
-    transform: rotate(-45deg) translate(2px, -2px); /* Umaangat ng konti ang arrow */
+    transform: rotate(-45deg) translate(2px, -2px); 
 }
 
 .project-section {
@@ -761,7 +693,6 @@ nav {
     transform: scale(1.2); 
 }
 
-/* --- DAGDAG PARA SA SCROLL ANIMATION STATES --- */
 .hidden {
     opacity: 0;
     filter: blur(5px);
