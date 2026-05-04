@@ -231,7 +231,7 @@ header {
 }
 
 .about-subtitle {
-    font-family: 'Oswald', sans-serif; /* Gamitin ang font na ginamit mo sa body */
+    font-family: 'Oswald', sans-serif; 
     font-size: 20px;        
     color: #ffffff;          
     text-transform: uppercase;
@@ -275,7 +275,7 @@ header {
 .btn-info:hover {
     background: rgba(255, 215, 0, 0.1);
     border-color: #ffd700;
-    transform: translateY(-5px); /* Gentle lift effect */
+    transform: translateY(-5px); 
     color: #ffd700;
 }
 
@@ -419,7 +419,7 @@ header {
     transition: 0.5s ease;
 }
 
-/* Hover Overlay (Dito na lalabas yung text) */
+
 .level-overlay {
     border-radius: 8px;
     border: 2px solid rgba(255, 215, 0, 0.3);
@@ -747,7 +747,7 @@ header {
     border: 2px solid #555;
     border-radius: 5px;
     padding: 3px 8px;
-    font-size: 0.75rem; /* Pinaliit */
+    font-size: 0.75rem; 
     font-family: 'Oswald', sans-serif;
     font-weight: bold;
     box-shadow: 0 3px 0 #111;
