@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 
+        ========================================
+        META TAGS - Basic page setup
+        ========================================
+        charset: Para sa characters (UTF-8 = lahat ng wika OK)
+        viewport: Para mobile responsive
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reydenmar C. Dacanay | IT Student Portfolio</title>
+    
+    <!-- 
+        ========================================
+        GOOGLE FONTS - Inter font family
+        ========================================
+        weights: 300(thin),400(normal),500(medium),600(semi-bold),700(bold)
+    -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- 
+        ========================================
+        FONT AWESOME - 2000+ free icons
+        ========================================
+        fas = free solid icons
+        fab = free brands (FB, React, etc.)
+    -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- 
+        ========================================
+        ATING CSS FILE - External para malinis
+        ========================================
+        href="style.css" = same folder
+    -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- 
+        ========================================
+        NAVIGATION BAR - Fixed sa tuktok
+        ========================================
+        Hindi nawawala kahit mag-scroll
+    -->
+    <nav>
+        <div class="nav-container"> <!-- Container para centered -->
+            <!-- LOGO - Kanan side -->
+            <div class="logo">Dacanay</div>
+            
+            <!-- DESKTOP MENU LINKS - Kanan side -->
+            <ul class="nav-links"> <!-- ul = unordered list -->
+                <li><a href="#hero">Home</a></li>     <!-- #hero = smooth scroll sa section -->
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#interests">Interests</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            
+            <!-- MOBILE HAMBURGER MENU - Nawawala sa desktop -->
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i> <!-- Hamburger icon -->
+            </div>
+        </div>
+    </nav>
+
+    <!-- 
+        ========================================
+        HERO SECTION - Full screen intro
+        ========================================
+        100vh = buong height ng screen
+    -->
+    <section id="hero">
+        <div class="hero-content">
+            <!-- MAIN HEADING - Gradient text sa CSS -->
+            <h1>Reydenmar C. Dacanay</h1>
+            <!-- SUBTITLE -->
+            <p class="hero-subtitle">    Dacanay Portfolio | IT Student at Universidad de Dagupan</p>
+            <!-- CTA BUTTON - Call to Action -->
+            <a href="#contact" class="cta-button">Get In Touch</a>
+        </div>
+    </section>
+
+    <!-- 
+        ========================================
+        ABOUT ME SECTION - 2 columns (text + image)
+        ========================================
+        CSS Grid: 1fr 1fr = 50% | 50%
+    -->
+    <section id="about">
+        <!-- SECTION TITLE - May automatic underline sa CSS -->
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <!-- KANAN COLUMN: TEXT CONTENT -->
+            <div class="about-text">
+                <!-- BIO PARAGRAPH -->
+                <p>Hi, I'm Reydenmar C. Dacanay, a first-year college student at Universidad de Dagupan. I am currently pursuing a degree in Information Technology, where I am learning programming languages and developing my skills in programming, problem-solving, and technology use.</p>
+                
+                <!-- PERSONAL INFO CARDS - Flexbox vertical -->
+                <div class="personal-info">
+                    <!-- INFO CARD 1 -->
+                    <div class="info-item">
+                        <i class="fas fa-calendar"></i>  <!-- Icon -->
+                        <span>21 years old</span>        <!-- Text -->
+                    </div>
+                    <!-- INFO CARD 2 -->
+                    <div class="info-item">
+                        <i class="fas fa-university"></i>
+                        <span>Universidad de Dagupan</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- KALIWA COLUMN: PROFILE IMAGE -->
+            <div class="about-image">
+                <!-- src = image file name (same folder) -->
+                <img src="Dacimg/8f6f61d6-bffc-46e7-9d0c-36ddad26a61c.jpg" alt="Reydenmar C. Dacanay">
+                <!-- alt = para screen readers (accessibility) -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 
+        ========================================
+        TECHNICAL SKILLS - Responsive Grid Cards
+        ========================================
+        CSS: repeat(auto-fit, minmax(250px, 1fr))
+             = Auto columns depende sa screen size
+    -->
+    <section id="skills">
+        <h2 class="section-title"> Skills</h2>
+        <div class="skills-grid">
+            <!-- SKILL CARD 1:  -->
+            <div class="skill-card">
+               
+                <h3>•Basic knowledge in Electrical Skills. <br> •Decision making.
+                    •Teamwork. <br>•Automotive Skills.</h3>
+                
+            </div>
+            
+            <!-- SKILL CARD 2:  -->
+            <div class="skill-card">
+                
+                <h3>•Basic web development (HTML, CSS) <br> •Time management skills.</h3>
+                <p></p>
+            </div>
+            
+            <!-- SKILL CARD 3:  -->
+             <div class="skill-card">
+            
+                <h3>• Computer troubleshooting skills <br> • Basic automotive repair skills</h3>
+                
+             </div>
+            
+            <!-- SKILL CARD 4:  -->
+            <div class="skill-card">
+                <br>
+                <br>
+                <h3> Tricycle Driver ❤️ </h3>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- 
+        ========================================
+        INTERESTS SECTION - Similar to skills pero different style
+        ========================================
+    -->
+    <section id="interests">
+        <h2 class="section-title">Interests</h2>
+        <div class="interests-grid">
+            <!-- INTEREST 1: Electrical -->
+            <div class="interest-card">
+                <div class="interest-icon"><i class="fas fa-bolt"></i></div>
+                <h3>Electrical Skills</h3>
+                <p>Basic knowledge in electrical systems and wiring</p>
+            </div>
+            
+            <!-- INTEREST 2: Automotive -->
+            <div class="interest-card">
+                <div class="interest-icon"><i class="fas fa-car"></i></div>
+                <h3>Automotive Skills</h3>
+                <p>Basic automotive repair and maintenance</p>
+            </div>
+            
+            <!-- INTEREST 3: Decision Making -->
+            <div class="interest-card">
+                <div class="interest-icon"><i class="fas fa-brain"></i></div>
+                <h3>Decision Making</h3>
+                <p>Problem-solving and critical thinking</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 
+        ========================================
+        CONTACT SECTION - 2 columns (Info + Form)
+        ========================================
+        Formspree = libre email form service
+        Palitan mo YOUR_FORM_ID: formspree.io → new form
+    -->
+    <section id="contact">
+        <h2 class="section-title">Contact Me</h2>
+        <div class="contact-content">
+            <!-- KANAN COLUMN: CONTACT INFO -->
+            <div class="contact-info">
+                <!-- EMAIL ITEM -->
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p>reydenmardacanay@gmail.com</p>
+                    </div>
+                </div>
+                
+                <!-- FACEBOOK ITEM -->
+                <div class="contact-item">
+                    <i class="fab fa-facebook"></i>
+                    <div>
+                        <h4>Facebook</h4>
+                        <p><a href="https://www.facebook.com/DodingDacanay" target="_blank">Doding Dacanay</a></p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- KALIWA COLUMN: CONTACT FORM -->
+            <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <!-- NAME INPUT FIELD -->
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <!-- required = hindi pwede blank -->
+                </div>
+                
+                <!-- EMAIL INPUT FIELD -->
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Your Email" required>
+                </div>
+                
+                <!-- MESSAGE TEXTAREA -->
+                <div class="form-group">
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                </div>
+                
+                <!-- SUBMIT BUTTON -->
+                <button type="submit" class="cta-button">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- 
+        ========================================
+        FOOTER - Copyright at credits
+        ========================================
+    -->
+    <footer>
+        <p>&copy; 2025-2026 Reydenmar C. Dacanay. Made with ❤️ in Universidad de Dagupan.</p>
+        <!-- &copy; = © symbol -->
+    </footer>
+</body>
+</html>

@@ -1,0 +1,419 @@
+/* ========================================
+   CSS VARIABLES - MGA REUSABLE COLORS
+   ========================================
+   :root = global variables (gamitin sa buong page)
+   --primary-blue = pangunahing asul na kulay
+*/
+:root {
+    --primary-blue: #0a74da;        /* Pangunahing asul */
+    --secondary-blue: #1e40af;      /* Pangalawang asul */
+    --dark-bg: #0f172a;             /* Madilim na background */
+    --light-bg: #1e293b;            /* Liwanag na card background */
+    --text-light: #f8fafc;          /* Maputlang text */
+    --text-medium: #e2e8f0;         /* Medium gray text */
+    --accent-blue: #3b82f6;         /* Highlight color */
+    --white: #ffffff;               /* Puti */
+}
+
+/* 
+   ========================================
+   GLOBAL STYLES - Lahat ng elements
+   ========================================
+   * = universal selector (affects lahat)
+   box-sizing: border-box = accurate sizing
+*/
+* { 
+    margin: 0;                      /* Walang default margin */
+    padding: 0;                     /* Walang default padding */
+    box-sizing: border-box;         /* Total width/height = content + padding + border */
+}
+
+body {
+    font-family: 'Inter', sans-serif;   /* Font family */
+    line-height: 1.6;                   /* Espasyo sa lines ng text */
+    color: var(--text-light);           /* Default text color */
+    background: var(--dark-bg);         /* Dark theme */
+}
+
+/* 
+   ========================================
+   NAVIGATION BAR - Fixed sa tuktok
+   ========================================
+   position: fixed = hindi nawawala sa scroll
+   backdrop-filter: blur = glass effect
+*/
+nav {
+    position: fixed;                    /* Nakafix sa top */
+    top: 0;                             /* 0 distance sa top */
+    width: 100%;                        /* Buong width */
+    background: rgba(15, 23, 42, 0.95); /* Semi-transparent */
+    backdrop-filter: blur(10px);        /* Blur effect */
+    z-index: 1000;                      /* Laging nasa ibabaw */
+    padding: 1rem 0;                    /* Top/bottom padding */
+    border-bottom: 1px solid rgba(59, 130, 246, 0.2); /* Thin border */
+}
+
+.nav-container {
+    max-width: 1200px;                  /* Max content width */
+    margin: 0 auto;                     /* Centered */
+    display: flex;                      /* Flexbox layout */
+    justify-content: space-between;     /* Left | Right spacing */
+    align-items: center;                /* Vertical center */
+    padding: 0 2rem;                    /* Side padding */
+}
+
+.logo {
+    font-size: 1.5rem;                  /* Size ng logo */
+    font-weight: 700;                   /* Bold */
+    color: var(--primary-blue);         /* Asul na kulay */
+}
+
+.nav-links {
+    display: flex;                      /* Horizontal menu */
+    list-style: none;                   /* Walang bullets */
+    gap: 1.5rem;                        /* Espasyo sa links */
+}
+
+.nav-links a {
+    color: var(--text-medium);          /* Gray text */
+    text-decoration: none;              /* Walang underline */
+    font-weight: 500;                   /* Semi-bold */
+    padding: 0.5rem 1rem;               /* Button padding */
+    border-radius: 8px;                 /* Rounded corners */
+    transition: all 0.3s ease;          /* Smooth hover animation */
+}
+
+.nav-links a:hover {
+    color: var(--white);                /* Puti sa hover */
+    background: var(--primary-blue);    /* Asul background */
+}
+
+.mobile-menu { 
+    display: none;                      /* Nawala sa desktop */
+    cursor: pointer;                    /* Pointer cursor */
+}
+.mobile-menu i { 
+    font-size: 1.5rem; 
+    color: var(--text-light); 
+}
+
+/* 
+   ========================================
+   HERO SECTION - Full screen banner
+   ========================================
+   100vh = 100% viewport height
+   clamp() = responsive font size
+*/
+#hero {
+    height: 100vh;                      /* Buong screen height */
+    background: linear-gradient(135deg, var(--dark-bg) 0%, var(--secondary-blue) 100%);
+                                    /* Diagonal gradient */
+    display: flex;                      /* Flexbox center */
+    align-items: center;                /* Vertical center */
+    justify-content: center;            /* Horizontal center */
+    text-align: center;                 /* Center text */
+    padding: 0 2rem;                    /* Side padding */
+}
+
+.hero-content h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem); /* Responsive: mobile=2.5rem, desktop=4rem */
+    font-weight: 700;                   /* Extra bold */
+    margin-bottom: 1rem;
+    /* GRADIENT TEXT EFFECT */
+    background: linear-gradient(45deg, var(--primary-blue), var(--accent-blue));
+    -webkit-background-clip: text;      /* Webkit browsers */
+    -webkit-text-fill-color: transparent;
+    background-clip: text;              /* Standard */
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    color: var(--text-medium);
+    margin-bottom: 2rem;
+    max-width: 600px;                   /* Limit width */
+}
+
+/* 
+   ========================================
+   CTA BUTTON - Call To Action
+   ========================================
+   Most important button sa page
+*/
+.cta-button {
+    display: inline-block;              /* Inline pero block properties */
+    background: var(--primary-blue);
+    color: var(--white);
+    padding: 1rem 2.5rem;               /* Vertical | Horizontal */
+    border-radius: 50px;                /* Fully rounded */
+    text-decoration: none;              /* Walang underline */
+    font-weight: 600;                   /* Bold */
+    transition: all 0.3s ease;          /* Smooth animation */
+    box-shadow: 0 10px 30px rgba(10, 116, 218, 0.3); /* Shadow */
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);        /* Uplift effect */
+    box-shadow: 0 15px 40px rgba(10, 116, 218, 0.4); /* Bigger shadow */
+    background: var(--accent-blue);     /* Mas magandang asul */
+}
+
+/* 
+   ========================================
+   GENERIC SECTION STYLES
+   ========================================
+   Lahat ng section ganito layout
+*/
+section {
+    padding: 100px 2rem;                /* Top/bottom | Left/right */
+    max-width: 1200px;                  /* Max content width */
+    margin: 0 auto;                     /* Auto center */
+}
+
+.section-title {
+    font-size: 2.5rem;                  /* Big title */
+    font-weight: 700;                   /* Bold */
+    text-align: center;
+    margin-bottom: 4rem;                /* Espasyo sa baba */
+    color: var(--text-light);
+}
+
+/* PSEUDO-ELEMENT - Automatic underline */
+.section-title::after {
+    content: '';                        /* Walang text, just element */
+    display: block;
+    width: 80px;                        /* Width ng underline */
+    height: 4px;                        /* Thickness */
+    background: var(--primary-blue);
+    margin: 1rem auto;                  /* Center */
+    border-radius: 2px;                 /* Rounded ends */
+}
+
+/* 
+   ========================================
+   ABOUT SECTION - 2-column grid
+   ========================================
+   1fr 1fr = 50% | 50%
+*/
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;     /* 2 equal columns */
+    gap: 4rem;                          /* Espasyo sa pagitan */
+    align-items: center;                /* Vertical alignment */
+}
+
+.about-text {
+    font-size: 1.1rem;
+    color: var(--text-medium);
+    line-height: 1.8;                   /* Mas madaling basahin */
+}
+
+.about-image {
+    width: 100%;                        /* Full width ng container */
+    height: 400px;                      /* Fixed height */
+    border-radius: 20px;                /* Rounded corners */
+    overflow: hidden;                   /* Hindi lumalabas image */
+    box-shadow: 0 20px 40px rgba(10, 116, 218, 0.3); /* Shadow */
+    transition: all 0.3s ease;          /* Smooth hover */
+}
+
+.about-image:hover {
+    transform: scale(1.05);             /* Slight zoom */
+    box-shadow: 0 25px 50px rgba(10, 116, 218, 0.4); /* Bigger shadow */
+}
+
+/* IMAGE INSIDE CONTAINER */
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;                  /* Perfect fit walang distortion */
+}
+
+.personal-info {
+    display: flex;                      /* Vertical stack */
+    flex-direction: column;
+    gap: 1rem;                          /* Espasyo sa cards */
+    margin-top: 2rem;
+}
+
+.info-item {
+    display: flex;                      /* Icon + Text horizontal */
+    align-items: center;
+    gap: 1rem;
+    color: var(--text-medium);
+    padding: 1rem;
+    background: var(--light-bg);        /* Card background */
+    border-radius: 12px;                /* Rounded */
+}
+
+/* 
+   ========================================
+   SKILLS GRID - Responsive cards
+   ========================================
+   repeat(auto-fit, minmax(250px, 1fr))
+   = Auto columns, minimum 250px each
+*/
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.skill-card {
+    background: var(--light-bg);        /* Card background */
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    border: 2px solid var(--primary-blue); /* Border accent */
+    transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);       /* Lift up animation */
+    box-shadow: 0 20px 40px rgba(10, 116, 218, 0.3);
+}
+
+.skill-icon {
+    font-size: 3rem;                    /* Big icon */
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+}
+
+/* 
+   ========================================
+   INTERESTS - Different style from skills
+   ========================================
+*/
+.interests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.interest-card {
+    background: linear-gradient(135deg, var(--light-bg), var(--secondary-blue));
+                                    /* Gradient background */
+    padding: 2.5rem;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid rgba(59, 130, 246, 0.3); /* Subtle border */
+    transition: all 0.3s ease;
+}
+
+.interest-card:hover {
+    transform: scale(1.05);             /* Zoom effect */
+    border-color: var(--accent-blue);   /* Border color change */
+}
+
+.interest-icon {
+    font-size: 3.5rem;                  /* Bigger icons */
+    color: var(--accent-blue);
+    margin-bottom: 1rem;
+}
+
+/* 
+   ========================================
+   CONTACT SECTION - 2-column layout
+   ========================================
+*/
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: var(--light-bg);
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    background: var(--primary-blue);    /* Color change */
+    transform: translateX(10px);        /* Slide right */
+}
+
+.contact-item i {
+    font-size: 1.5rem;
+    color: var(--primary-blue);
+    width: 50px;                        /* Perfect circle */
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.1);  /* Transparent white */
+    border-radius: 50%;                 /* Perfect circle */
+}
+
+.contact-form {
+    background: var(--light-bg);
+    padding: 2.5rem;
+    border-radius: 20px;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;              /* Espasyo sa inputs */
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;                        /* Full width */
+    padding: 1rem;
+    background: var(--dark-bg);         /* Dark input background */
+    border: 2px solid transparent;      /* Invisible border */
+    border-radius: 12px;
+    color: var(--text-light);
+    font-family: inherit;               /* Same font as body */
+    transition: border-color 0.3s ease; /* Smooth focus */
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-blue);  /* Asul border sa focus */
+    outline: none;                      /* Walang default outline */
+}
+
+.form-group textarea {
+    resize: vertical;                   /* Resize pataas lang */
+    min-height: 120px;                  /* Minimum height */
+}
+
+/* 
+   ========================================
+   FOOTER
+   ========================================
+*/
+footer {
+    background: var(--dark-bg);
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid rgba(59, 130, 246, 0.2);
+    color: var(--text-medium);
+}
+
+/* 
+   ========================================
+   MOBILE RESPONSIVE - @media queries
+   ========================================
+   max-width: 768px = tablets at phones
+*/
+@media (max-width: 768px) {
+    /* ITAGO DESKTOP MENU, IPAKITA MOBILE */
+    .nav-links { display: none; }           /* Nawala desktop links */
+    .mobile-menu { display: block; }        /* Ipakita hamburger */
+    
+    /* VERTICAL STACK SA MOBILE */
+    .about-content,
+    .contact-content {
+        grid-template-columns: 1fr;         /* 1 column lang */
+        gap: 2rem;
+    }
+    
+    /* LESS PADDING SA MOBILE */
+    section { padding: 60px 1.5rem; }       /* Mas maliit na padding */
+    .section-title { font-size: 2rem; }     /* Mas maliit na title */
+}
