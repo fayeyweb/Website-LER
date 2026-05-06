@@ -21,7 +21,6 @@ body {
   padding: 15px 8%;
   z-index: 1000;
 }
-
 .logo {
   color: white;
   font-weight: bold;
@@ -44,10 +43,9 @@ body {
 }
 
 .navigation a:hover {
-  color: #ffd700; /* gold highlight */
+  color: #ffd700; 
   transform: translateY(-2px);
 }
-
 
 .section {
   min-height: 100vh;
@@ -72,16 +70,13 @@ body {
   background: linear-gradient(135deg, #7d5ba6, #a77bb5);
 }
 
-
 #experience {
   background: linear-gradient(135deg, #8e5ea2, #c39bd3);
 }
 
-
-
 .content {
   width: 100%;
-  max-width: 700px; /* keeps text readable */
+  max-width: 700px; 
   margin: auto;
   color: #ecc9fc;
 }
@@ -99,7 +94,7 @@ text-align: justify;
   gap: 50px;
   color: #ecc9fc;
 }
-/* TEXT SIDE */
+
 .intro {
   flex: 1;
   font-family: Verdana;
@@ -110,8 +105,6 @@ text-align: justify;
 font-family: 'Courier New', Courier;
 font-size: 15px;
 }
-
-
 
 .image-container {
   flex: 1;
@@ -164,7 +157,6 @@ ul {
   line-height: 1.6;
 }
 
-
 .skills-container {
   display: flex;
   gap: 20px;
@@ -183,16 +175,14 @@ ul {
  background: linear-gradient(135deg, #f5f3f0, #838280);
   transform: scale(1.05);
   box-shadow: 0 0 15px rgba(243, 93, 243, 0.8);
-  color: #fa08e6; /* gold highlight */
+  color: #fa08e6; 
   transform: translateY(-2px);
 }
-
 
 .section h2 {
   margin-bottom: 30px;
 }
 
-/* RESPONSIVE */
 @media (max-width: 800px) {
 
   .navbar {
@@ -225,84 +215,219 @@ ul {
 
 /* GRID LAYOUT */
 .interests-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 20px;
-  width: 100%;
-  max-width: 700px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 700px;
 }
 
 /* EACH INTEREST BOX */
 .interest-item {
-  background: rgba(255,255,255,0.15);
-  padding: 20px;
-  border-radius: 12px;
-  text-align: left;
-  transition: 0.3s;
-
+    background: rgba(255,255,255,0.15);
+    padding: 25px 20px;
+    border-radius: 12px;
+    text-align: left;
+    transition: 0.3s;
+    padding-bottom: 10px;
 }
 
 .interest-item:hover {
-  background: linear-gradient(135deg, #f5f3f0, #838280);
-  transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(243, 93, 243, 0.8);
-  color: #fa08e6; /* gold highlight */
-  transform: translateY(-2px);
+    background: linear-gradient(135deg, #f5f3f0, #838280);
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(243, 93, 243, 0.8);
+    color: #fa08e6;
+    transform: translateY(-2px);
 }
 
 /* TITLE INSIDE BOX */
 .interest-item h4 {
-  margin-bottom: 8px;
-  font-size: 18px;
+    margin-bottom: 8px;
+    font-size: 18px;
 }
 
 /* DESCRIPTION */
 .interest-item p {
-  font-size: 13px;
-  opacity: 0.9;
+    font-size: 13px;
+    opacity: 0.9;
 }
-/* EXPERIENCE GRID */
-#experience ul {
-  list-style: none;
-  padding: 0;
-  margin-top: 20px;
 
+.interest-item img {
+    width: 100px;
+    height: 120px;
+    margin-bottom: 8px;
+    display: block; 
+    object-fit: contain;
+    object-fit: cover;
+    border-radius: 8px; 
+}
+
+.expe{
+  text-align: center;
+  padding: 50px 0; 
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #9b6baf, #b088c9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+/* Heading style */
+.expe h2 {
+  color: #f3e5f5;
+  font-size: 40px; 
+  margin-bottom: 40px; 
+  letter-spacing: 2px;
+  font-weight: normal;
+}
+
+.experience-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px; 
+  width: 80%;
+  max-width: 1200px;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  min-height: auto;
 }
 
-/* EACH EXPERIENCE BOX */
-#experience ul li {
-  background:  rgba(255,255,255,0.15);
-  padding: 20px;
-  border-radius: 12px;
-  text-align: left;
-
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-
-#experience ul li:hover {
-  transform: translateY(-8px) scale(1.03);
-  background:  rgba(255,255,255,0.15);
-  box-shadow: 0 10px 20px rgba(243, 93, 243, 0.8);
-  color: #fa08e6; /* gold highlight */
-
-}
-
-
-#experience ul li::before {
-  content: "";
-  display: block;
-  font-size: 20px;
-  margin-bottom: 10px;
+.box {
+  background-color: #b994d1;
+  padding: 10px 10px; 
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  backdrop-filter: none;
   transition: 0.3s;
 }
 
+.box:hover {
+ background: linear-gradient(135deg, #f5f3f0, #838280);
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(243, 93, 243, 0.8);
+  color: #fa08e6; 
+  transform: translateY(-2px);
+}
 
-#experience ul li:hover::before {
-  transform: scale(1.2);
+.box img {
+  width: 100px;
+  margin-bottom: 15px;
+}
+
+.box p {
+  color: #f3e5f5;
+  font-size: 16px; 
+  line-height: 32px; 
+}
+
+@media (max-width: 768px) {
+  .experience-container {
+    grid-template-columns: 1fr;
+    width: 95%;
+  }
+
+  .expe h2 {
+    font-size: 32px; 
+  }
+
+  .box p {
+    font-size: 18px; 
+    line-height: 28px;
+  }
+}
+@media (max-width: 768px) {
+
+    .nav {
+        flex-direction: column;
+        padding: 10px 5%;
+    }
+    .logo {
+        margin-bottom: 8px;
+    }
+    .navigation {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    .navigation a {
+        margin: 0 8px;
+        font-size: 13px;
+    }
+    .Main {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+    .intro {
+        text-align: center;
+        font-size: clamp(24px, 6vw, 32px);
+    }
+    .intro p {
+        font-size: 14px;
+    }
+    .profile-img {
+        width: 180px;
+        height: 180px;
+    }
+    .content {
+        padding: 0 15px;
+    }
+    .content p {
+        font-size: 16px;
+    }
+
+    .interests-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 0 10px;
+    }
+    .interest-item {
+        padding: 20px 15px;
+    }
+    .interest-item img {
+        width: 100%;
+        height: 110px;
+    }
+
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .skill {
+        width: 90%;
+        max-width: 300px;
+    }
+
+}
+@media (max-width: 480px) {
+
+    .nav {
+        padding: 8px 3%;
+    }
+    .navigation a {
+        font-size: 12px;
+        margin: 0 5px;
+    }
+
+    .profile-img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .intro {
+        font-size: 22px;
+    }
+
+    .interest-item img {
+        height: 95px;
+    }
+
+    .expe h2 {
+        font-size: 26px;
+    }
 }
