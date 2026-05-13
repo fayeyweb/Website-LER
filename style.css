@@ -977,3 +977,64 @@ header {
     text-transform: uppercase;
     font-weight: 600;
 }
+
+
+/* Para sa mga Tablets at maliliit na Laptops (1024px pababa) */
+@media (max-width: 1024px) {
+    .nav-container { padding: 20px; }
+    
+    /* Inayos ang malaking margin sa landing page */
+    .content-wrapper { margin-left: 50px; padding-right: 0; }
+    
+    /* Ginawang 2 columns imbes na 3 para hindi siksikan */
+    .features-grid, .dev-grid, .how-container { grid-template-columns: repeat(2, 1fr); }
+    
+    /* Para pumila pababa ang levels kapag di na kasya */
+    .levels-container { flex-wrap: wrap; }
+    
+    /* Inayos ang fixed translations sa characters section */
+    .char-image-right img { transform: translateX(0) translateY(-50px); max-width: 400px; }
+    .char-info-left { transform: translateX(0) translateY(-50px); }
+}
+
+/* Para sa mga Cellphones at maliliit na Tablets (768px pababa) */
+@media (max-width: 768px) {
+    /* Navigator adjustments */
+    .nav-container { flex-direction: column; align-items: center; gap: 15px; }
+    .nav-left { flex-wrap: wrap; justify-content: center; gap: 15px; }
+    
+    /* Centered landing page */
+    .content-wrapper { margin-left: 0; align-items: center; text-align: center; }
+    .main-title { font-size: 50px; }
+    .main-title span { font-size: 40px; }
+    .landing-page { justify-content: center; padding-right: 0; }
+    
+    /* Ginawang 1 column ang mga grid para sa mobile */
+    .features-grid, .dev-grid, .how-container { grid-template-columns: 1fr; }
+    .char-content.active { grid-template-columns: 1fr; text-align: center; gap: 30px; }
+    
+    /* Nireset ang mga fixed positions na sumisira sa mobile view */
+    .char-info-left, .char-image-right img { transform: none; padding: 0; margin: 0 auto; }
+    .skill-buttons { justify-content: center; }
+    .info-buttons-box { flex-direction: column; align-items: center; }
+    .btn-info { width: 100%; max-width: 300px; }
+    
+    /* Pinaliit ang mga malalaking text */
+    .about-title, .levels-main-title, .char-main-title, .how-main-title, .why-main-title, .dev-main-title { font-size: 35px; }
+    .about-description, .why-text { font-size: 16px; }
+    
+    /* Box paddings */
+    .why-content-box { padding: 30px 20px; }
+    .details-section, .features-section, .levels-section, .char-section, .how-section, .why-play-section, .dev-section { padding-left: 20px; padding-right: 20px; }
+}
+
+/* Para sa mga napakaliit na Cellphones (480px pababa) */
+@media (max-width: 480px) {
+    .button-group { flex-direction: column; gap: 15px; width: 100%; max-width: 250px; }
+    .btn { text-align: center; }
+    .main-title { font-size: 40px; }
+    .main-title span { font-size: 30px; }
+    .level-card { width: 100%; height: auto; aspect-ratio: 16/9; }
+    .char-name { font-size: 40px; }
+    .why-action .btn-play { padding: 15px 30px; font-size: 15px; }
+}
